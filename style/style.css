@@ -1565,5 +1565,95 @@ footer {
       #content.category-page-content #category-page-section-1 .width-wrapper .category-item-list .category-item.item-state-3 {
         width: 385px;
         height: 600px; }
+#content.projects-page-content #projects-page-section-1 {
+  width: 100%; }
+  #content.projects-page-content #projects-page-section-1 .width-wrapper {
+    margin: 0px 0px;
+    display: flex;
+    flex-direction: column; }
+    #content.projects-page-content #projects-page-section-1 .width-wrapper .project-item-list {
+      display: flex;
+      flex-direction: column;
+      width: 100%; }
+      #content.projects-page-content #projects-page-section-1 .width-wrapper .project-item-list .project-item {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: stretch;
+        overflow: hidden;
+        position: relative;
+        height: 700px;
+        margin: 0px 0px 180px 0px; }
+        #content.projects-page-content #projects-page-section-1 .width-wrapper .project-item-list .project-item .project-item-area-list-wrapper {
+          position: absolute;
+          display: flex;
+          flex-direction: row;
+          align-items: stretch;
+          justify-content: stretch;
+          height: 700px; }
+          #content.projects-page-content #projects-page-section-1 .width-wrapper .project-item-list .project-item .project-item-area-list-wrapper .project-item-area .item-area-image-wrapper {
+            position: relative;
+            overflow: hidden; }
+            #content.projects-page-content #projects-page-section-1 .width-wrapper .project-item-list .project-item .project-item-area-list-wrapper .project-item-area .item-area-image-wrapper img {
+              display: block;
+              width: 100%;
+              height: 100%;
+              z-index: -1; }
+            #content.projects-page-content #projects-page-section-1 .width-wrapper .project-item-list .project-item .project-item-area-list-wrapper .project-item-area .item-area-image-wrapper .dark-overlay {
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background-color: rgba(0, 0, 0, 0.5);
+              z-index: 100; }
+          #content.projects-page-content #projects-page-section-1 .width-wrapper .project-item-list .project-item .project-item-area-list-wrapper .project-item-area .project-item-information-wrapper {
+            margin: 0px 0px 0px 30px; }
+            #content.projects-page-content #projects-page-section-1 .width-wrapper .project-item-list .project-item .project-item-area-list-wrapper .project-item-area .project-item-information-wrapper .item-title {
+              color: #B6A172;
+              font-family: Rosario;
+              font-size: 60px;
+              font-weight: 400;
+              line-height: 110%;
+              text-transform: uppercase;
+              width: 530px; }
+            #content.projects-page-content #projects-page-section-1 .width-wrapper .project-item-list .project-item .project-item-area-list-wrapper .project-item-area .project-item-information-wrapper .item-text-1 {
+              color: #F4F4F4;
+              font-size: 15px;
+              font-weight: 600;
+              line-height: 120%;
+              letter-spacing: 1.05px;
+              text-transform: uppercase;
+              margin: 20px 0px 0px 0px; }
+          #content.projects-page-content #projects-page-section-1 .width-wrapper .project-item-list .project-item .project-item-area-list-wrapper .project-item-area.area-1 {
+            width: 525px;
+            z-index: 300; }
+          #content.projects-page-content #projects-page-section-1 .width-wrapper .project-item-list .project-item .project-item-area-list-wrapper .project-item-area.area-2 {
+            width: 310px;
+            z-index: 200;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start; }
+          #content.projects-page-content #projects-page-section-1 .width-wrapper .project-item-list .project-item .project-item-area-list-wrapper .project-item-area.area-3 {
+            width: 1365px;
+            z-index: 100; }
+        #content.projects-page-content #projects-page-section-1 .width-wrapper .project-item-list .project-item:nth-child(odd) .project-item-area-list-wrapper {
+          left: auto;
+          right: 0; }
+        #content.projects-page-content #projects-page-section-1 .width-wrapper .project-item-list .project-item:nth-child(even) .project-item-area-list-wrapper {
+          left: 0;
+          right: auto; }
+    #content.projects-page-content #projects-page-section-1 .width-wrapper .show-more-projects-link {
+      display: inline-block;
+      color: #B6A172;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 120%;
+      letter-spacing: 1.05px;
+      text-transform: uppercase;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #B6A172;
+      margin: 100px auto 180px; }
 
 /*# sourceMappingURL=style.css.map */
