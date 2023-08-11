@@ -3,6 +3,9 @@
 @font-face {
   font-family: Rosario;
   src: url("fonts/Rosario/Rosario-VariableFont_wght.ttf"); }
+@font-face {
+  font-family: Rosario;
+  src: url("fonts/Aguila/latinotype-aguila-thin.otf"); }
 /* Sizes */
 /* Styles */
 /* Main style */
@@ -58,6 +61,12 @@ header {
     justify-content: space-between;
     margin: 20px auto;
     width: 100%; }
+  header.page-404 .width-wrapper {
+    justify-content: center;
+    margin-top: 80px;
+    margin-bottom: 0px; }
+    header.page-404 .width-wrapper #top-logo-block {
+      margin: 0px 0px 0px 0px; }
 
 footer {
   background-color: #151616;
@@ -1936,36 +1945,36 @@ footer {
   #content.about-us-page-content #about-us-page-section-1 .width-wrapper .section-info-wrapper {
     width: 530px;
     margin: 0px auto; }
-#content #about-us-page-section-2 {
+#content.about-us-page-content #about-us-page-section-2 {
   background-color: #B6A172;
   padding: 80px 0px 100px; }
-  #content #about-us-page-section-2 .width-wrapper .blocks-wrapper {
+  #content.about-us-page-content #about-us-page-section-2 .width-wrapper .blocks-wrapper {
     display: flex;
     flex-direction: row;
     align-items: stretch;
     justify-content: stretch; }
-    #content #about-us-page-section-2 .width-wrapper .blocks-wrapper .block {
+    #content.about-us-page-content #about-us-page-section-2 .width-wrapper .blocks-wrapper .block {
       display: flex;
       align-items: center;
       justify-content: flex-start; }
-      #content #about-us-page-section-2 .width-wrapper .blocks-wrapper .block.block-1 {
+      #content.about-us-page-content #about-us-page-section-2 .width-wrapper .blocks-wrapper .block.block-1 {
         width: 560px; }
-        #content #about-us-page-section-2 .width-wrapper .blocks-wrapper .block.block-1 .section-heading {
+        #content.about-us-page-content #about-us-page-section-2 .width-wrapper .blocks-wrapper .block.block-1 .section-heading {
           color: #F4F4F4; }
-      #content #about-us-page-section-2 .width-wrapper .blocks-wrapper .block.block-2 {
+      #content.about-us-page-content #about-us-page-section-2 .width-wrapper .blocks-wrapper .block.block-2 {
         flex: 1;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between; }
-        #content #about-us-page-section-2 .width-wrapper .blocks-wrapper .block.block-2 .statistics-item .statistics-text-1 {
+        #content.about-us-page-content #about-us-page-section-2 .width-wrapper .blocks-wrapper .block.block-2 .statistics-item .statistics-text-1 {
           color: #F4F4F4;
           text-align: center;
           font-size: 100px;
           font-weight: 600;
           line-height: 110%;
           text-transform: uppercase; }
-        #content #about-us-page-section-2 .width-wrapper .blocks-wrapper .block.block-2 .statistics-item .statistics-text-2 {
+        #content.about-us-page-content #about-us-page-section-2 .width-wrapper .blocks-wrapper .block.block-2 .statistics-item .statistics-text-2 {
           color: #F4F4F4;
           text-align: center;
           font-size: 20px;
@@ -1974,13 +1983,13 @@ footer {
           letter-spacing: 1.4px;
           text-transform: uppercase;
           margin: 16px 0px 0px 0px; }
-#content #about-us-page-section-3 {
+#content.about-us-page-content #about-us-page-section-3 {
   padding: 180px 0px 224px; }
-  #content #about-us-page-section-3 .width-wrapper {
+  #content.about-us-page-content #about-us-page-section-3 .width-wrapper {
     display: flex;
     align-items: center;
     justify-content: flex-end; }
-    #content #about-us-page-section-3 .width-wrapper .information-text {
+    #content.about-us-page-content #about-us-page-section-3 .width-wrapper .information-text {
       width: 1090px;
       color: #F4F4F4;
       font-family: Rosario;
@@ -1988,42 +1997,42 @@ footer {
       font-weight: 600;
       line-height: 110%;
       text-transform: uppercase; }
-#content #about-us-page-section-4 .width-wrapper .blocks-wrapper {
+#content.about-us-page-content #about-us-page-section-4 .width-wrapper .blocks-wrapper {
   display: flex;
   flex-direction: row;
   align-items: stretch;
   justify-content: stretch;
   height: 800px;
   padding: 0px 0px 180px 0px; }
-  #content #about-us-page-section-4 .width-wrapper .blocks-wrapper .block.block-1 {
+  #content.about-us-page-content #about-us-page-section-4 .width-wrapper .blocks-wrapper .block.block-1 {
     width: 421px;
     display: flex;
     align-items: center;
     justify-content: flex-start; }
-  #content #about-us-page-section-4 .width-wrapper .blocks-wrapper .block.block-2 {
+  #content.about-us-page-content #about-us-page-section-4 .width-wrapper .blocks-wrapper .block.block-2 {
     flex: 1;
     position: relative; }
-    #content #about-us-page-section-4 .width-wrapper .blocks-wrapper .block.block-2 .map-container {
+    #content.about-us-page-content #about-us-page-section-4 .width-wrapper .blocks-wrapper .block.block-2 .map-container {
       position: absolute;
       top: 0px;
       left: 0px;
       bottom: 0px;
       width: 1364px;
       overflow: hidden; }
-      #content #about-us-page-section-4 .width-wrapper .blocks-wrapper .block.block-2 .map-container .map-inner-wrapper {
+      #content.about-us-page-content #about-us-page-section-4 .width-wrapper .blocks-wrapper .block.block-2 .map-container .map-inner-wrapper {
         position: relative;
         width: 100%;
         height: 100%; }
-        #content #about-us-page-section-4 .width-wrapper .blocks-wrapper .block.block-2 .map-container .map-inner-wrapper img {
+        #content.about-us-page-content #about-us-page-section-4 .width-wrapper .blocks-wrapper .block.block-2 .map-container .map-inner-wrapper img {
           position: absolute;
           display: block;
           width: 100%;
           height: 100%; }
-        #content #about-us-page-section-4 .width-wrapper .blocks-wrapper .block.block-2 .map-container .map-inner-wrapper .map-points-wrapper {
+        #content.about-us-page-content #about-us-page-section-4 .width-wrapper .blocks-wrapper .block.block-2 .map-container .map-inner-wrapper .map-points-wrapper {
           position: relative;
           width: 100%;
           height: 100%; }
-          #content #about-us-page-section-4 .width-wrapper .blocks-wrapper .block.block-2 .map-container .map-inner-wrapper .map-points-wrapper .map-point {
+          #content.about-us-page-content #about-us-page-section-4 .width-wrapper .blocks-wrapper .block.block-2 .map-container .map-inner-wrapper .map-points-wrapper .map-point {
             position: absolute;
             display: inline-block;
             color: #F4F4F4;
@@ -2033,56 +2042,56 @@ footer {
             line-height: 120%;
             letter-spacing: 1.4px;
             text-transform: uppercase; }
-            #content #about-us-page-section-4 .width-wrapper .blocks-wrapper .block.block-2 .map-container .map-inner-wrapper .map-points-wrapper .map-point:hover {
+            #content.about-us-page-content #about-us-page-section-4 .width-wrapper .blocks-wrapper .block.block-2 .map-container .map-inner-wrapper .map-points-wrapper .map-point:hover {
               color: #B6A172; }
-            #content #about-us-page-section-4 .width-wrapper .blocks-wrapper .block.block-2 .map-container .map-inner-wrapper .map-points-wrapper .map-point.san-francisco {
+            #content.about-us-page-content #about-us-page-section-4 .width-wrapper .blocks-wrapper .block.block-2 .map-container .map-inner-wrapper .map-points-wrapper .map-point.san-francisco {
               top: 334px;
               left: 125px; }
-            #content #about-us-page-section-4 .width-wrapper .blocks-wrapper .block.block-2 .map-container .map-inner-wrapper .map-points-wrapper .map-point.netherlands {
+            #content.about-us-page-content #about-us-page-section-4 .width-wrapper .blocks-wrapper .block.block-2 .map-container .map-inner-wrapper .map-points-wrapper .map-point.netherlands {
               top: 254px;
               left: 594px; }
-            #content #about-us-page-section-4 .width-wrapper .blocks-wrapper .block.block-2 .map-container .map-inner-wrapper .map-points-wrapper .map-point.switzerland {
+            #content.about-us-page-content #about-us-page-section-4 .width-wrapper .blocks-wrapper .block.block-2 .map-container .map-inner-wrapper .map-points-wrapper .map-point.switzerland {
               top: 295px;
               left: 553px; }
-            #content #about-us-page-section-4 .width-wrapper .blocks-wrapper .block.block-2 .map-container .map-inner-wrapper .map-points-wrapper .map-point.spain {
+            #content.about-us-page-content #about-us-page-section-4 .width-wrapper .blocks-wrapper .block.block-2 .map-container .map-inner-wrapper .map-points-wrapper .map-point.spain {
               top: 338px;
               left: 597px; }
-            #content #about-us-page-section-4 .width-wrapper .blocks-wrapper .block.block-2 .map-container .map-inner-wrapper .map-points-wrapper .map-point.latvia {
+            #content.about-us-page-content #about-us-page-section-4 .width-wrapper .blocks-wrapper .block.block-2 .map-container .map-inner-wrapper .map-points-wrapper .map-point.latvia {
               top: 213px;
               left: 768px; }
-            #content #about-us-page-section-4 .width-wrapper .blocks-wrapper .block.block-2 .map-container .map-inner-wrapper .map-points-wrapper .map-point.italy {
+            #content.about-us-page-content #about-us-page-section-4 .width-wrapper .blocks-wrapper .block.block-2 .map-container .map-inner-wrapper .map-points-wrapper .map-point.italy {
               top: 328px;
               left: 730px; }
-            #content #about-us-page-section-4 .width-wrapper .blocks-wrapper .block.block-2 .map-container .map-inner-wrapper .map-points-wrapper .map-point.malta {
+            #content.about-us-page-content #about-us-page-section-4 .width-wrapper .blocks-wrapper .block.block-2 .map-container .map-inner-wrapper .map-points-wrapper .map-point.malta {
               top: 384px;
               left: 729px; }
-            #content #about-us-page-section-4 .width-wrapper .blocks-wrapper .block.block-2 .map-container .map-inner-wrapper .map-points-wrapper .map-point.cyprus {
+            #content.about-us-page-content #about-us-page-section-4 .width-wrapper .blocks-wrapper .block.block-2 .map-container .map-inner-wrapper .map-points-wrapper .map-point.cyprus {
               top: 359px;
               left: 825px; }
-            #content #about-us-page-section-4 .width-wrapper .blocks-wrapper .block.block-2 .map-container .map-inner-wrapper .map-points-wrapper .map-point.russia {
+            #content.about-us-page-content #about-us-page-section-4 .width-wrapper .blocks-wrapper .block.block-2 .map-container .map-inner-wrapper .map-points-wrapper .map-point.russia {
               top: 158px;
               left: 993px; }
-#content #about-us-page-section-5 .width-wrapper .staff-block .staff-item-list {
+#content.about-us-page-content #about-us-page-section-5 .width-wrapper .staff-block .staff-item-list {
   display: flex;
   flex-direction: row;
   align-items: stretch;
   justify-content: stretch; }
-  #content #about-us-page-section-5 .width-wrapper .staff-block .staff-item-list .staff-item {
+  #content.about-us-page-content #about-us-page-section-5 .width-wrapper .staff-block .staff-item-list .staff-item {
     display: flex;
     flex-direction: column;
     align-items: stretch;
     justify-content: stretch;
     border: 1px solid #B6A172;
     margin: 0px 30px 0px 0px; }
-    #content #about-us-page-section-5 .width-wrapper .staff-block .staff-item-list .staff-item:last-child {
+    #content.about-us-page-content #about-us-page-section-5 .width-wrapper .staff-block .staff-item-list .staff-item:last-child {
       margin: 0px 0px 0px 0px; }
-    #content #about-us-page-section-5 .width-wrapper .staff-block .staff-item-list .staff-item .image-wrapper {
+    #content.about-us-page-content #about-us-page-section-5 .width-wrapper .staff-block .staff-item-list .staff-item .image-wrapper {
       height: 300px; }
-      #content #about-us-page-section-5 .width-wrapper .staff-block .staff-item-list .staff-item .image-wrapper img {
+      #content.about-us-page-content #about-us-page-section-5 .width-wrapper .staff-block .staff-item-list .staff-item .image-wrapper img {
         display: block;
         width: 100%;
         height: 100%; }
-    #content #about-us-page-section-5 .width-wrapper .staff-block .staff-item-list .staff-item .name {
+    #content.about-us-page-content #about-us-page-section-5 .width-wrapper .staff-block .staff-item-list .staff-item .name {
       color: #F4F4F4;
       font-size: 20px;
       font-weight: 600;
@@ -2091,13 +2100,66 @@ footer {
       text-transform: uppercase;
       background-color: #B6A172;
       padding: 20px 24px 22px; }
-    #content #about-us-page-section-5 .width-wrapper .staff-block .staff-item-list .staff-item .info-block {
+    #content.about-us-page-content #about-us-page-section-5 .width-wrapper .staff-block .staff-item-list .staff-item .info-block {
       padding: 20px 24px 24px; }
-      #content #about-us-page-section-5 .width-wrapper .staff-block .staff-item-list .staff-item .info-block .info-text {
+      #content.about-us-page-content #about-us-page-section-5 .width-wrapper .staff-block .staff-item-list .staff-item .info-block .info-text {
         color: #F4F4F4;
         font-size: 15px;
         font-weight: 400;
         line-height: 140%; }
+#content.page-404-content #page-404-section-1 .width-wrapper .central-block {
+  position: relative;
+  width: 1090px;
+  height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 140px auto 0px; }
+  #content.page-404-content #page-404-section-1 .width-wrapper .central-block .section-heading {
+    color: #B6A172;
+    text-align: center;
+    /* font-family: Aguila; */
+    font-size: 100px;
+    font-weight: 250;
+    line-height: 110%;
+    letter-spacing: 5px;
+    text-transform: uppercase; }
+  #content.page-404-content #page-404-section-1 .width-wrapper .central-block .section-background {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%; }
+#content.page-404-content #page-404-section-1 .width-wrapper .section-text-1 {
+  width: 530px;
+  color: #F4F4F4;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 1.05px;
+  text-transform: uppercase;
+  margin: 140px auto 0px; }
+#content.page-404-content #page-404-section-1 .width-wrapper .section-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0px 0px 0px; }
+  #content.page-404-content #page-404-section-1 .width-wrapper .section-menu .menu-item {
+    color: #B6A172;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 1.05px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #B6A172;
+    margin: 0px 40px 0px 0px; }
+    #content.page-404-content #page-404-section-1 .width-wrapper .section-menu .menu-item:last-child {
+      margin: 0px 0px 0px 0px; }
 
 /* Components */
 .heading-type-1 {
@@ -2208,5 +2270,6 @@ footer {
     width: 100%;
     margin-left: auto;
     margin-right: auto; } }
+/* Fixes */
 
 /*# sourceMappingURL=style.css.map */

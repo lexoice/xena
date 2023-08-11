@@ -10,6 +10,11 @@ $color_white: #F4F4F4;
   src: url('fonts/Rosario/Rosario-VariableFont_wght.ttf');
 }
 
+@font-face {
+  font-family: Rosario;
+  src: url('fonts/Aguila/latinotype-aguila-thin.otf');
+}
+
 /* Sizes */
 
 
@@ -75,6 +80,18 @@ header {
     justify-content: space-between;
     margin: 20px auto;
     width: 100%;
+  }
+
+  &.page-404 {
+    .width-wrapper {
+      justify-content: center;
+      margin-top: 80px;
+      margin-bottom: 0px;
+
+      #top-logo-block {
+        margin: 0px 0px 0px 0px;
+      }
+    }
   }
 }
 
@@ -2771,178 +2788,178 @@ footer {
         }
       }
     }
-  }
 
-  #about-us-page-section-2 {
-    background-color: $color_gold;
-    padding: 80px 0px 100px;
+    #about-us-page-section-2 {
+      background-color: $color_gold;
+      padding: 80px 0px 100px;
 
-    .width-wrapper {
-      .blocks-wrapper {
-        display: flex;
-        flex-direction: row;
-        align-items: stretch;
-        justify-content: stretch;
-
-        .block {
+      .width-wrapper {
+        .blocks-wrapper {
           display: flex;
-          align-items: center;
-          justify-content: flex-start;
+          flex-direction: row;
+          align-items: stretch;
+          justify-content: stretch;
 
-          &.block-1 {
-            width: 560px;
-
-            .section-heading {
-              color: $color_white;
-            }
-          }
-
-          &.block-2 {
-            flex: 1;
+          .block {
             display: flex;
-            flex-direction: row;
             align-items: center;
-            justify-content: space-between;
-            .statistics-item {
-              .statistics-text-1 {
+            justify-content: flex-start;
+
+            &.block-1 {
+              width: 560px;
+
+              .section-heading {
                 color: $color_white;
-                text-align: center;
-                font-size: 100px;
-                font-weight: 600;
-                line-height: 110%;
-                text-transform: uppercase;
               }
-              .statistics-text-2 {
-                color: $color_white;
-                text-align: center;
-                font-size: 20px;
-                font-weight: 600;
-                line-height: 120%;
-                letter-spacing: 1.4px;
-                text-transform: uppercase;
-                margin: 16px 0px 0px 0px;
+            }
+
+            &.block-2 {
+              flex: 1;
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: space-between;
+              .statistics-item {
+                .statistics-text-1 {
+                  color: $color_white;
+                  text-align: center;
+                  font-size: 100px;
+                  font-weight: 600;
+                  line-height: 110%;
+                  text-transform: uppercase;
+                }
+                .statistics-text-2 {
+                  color: $color_white;
+                  text-align: center;
+                  font-size: 20px;
+                  font-weight: 600;
+                  line-height: 120%;
+                  letter-spacing: 1.4px;
+                  text-transform: uppercase;
+                  margin: 16px 0px 0px 0px;
+                }
               }
             }
           }
         }
       }
     }
-  }
 
-  #about-us-page-section-3 {
-    padding: 180px 0px 224px;
-    .width-wrapper {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
+    #about-us-page-section-3 {
+      padding: 180px 0px 224px;
+      .width-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
 
-      .information-text {
-        width: 1090px;
-        color: $color_white;
-        font-family: Rosario;
-        font-size: 50px;
-        font-weight: 600;
-        line-height: 110%;
-        text-transform: uppercase;
+        .information-text {
+          width: 1090px;
+          color: $color_white;
+          font-family: Rosario;
+          font-size: 50px;
+          font-weight: 600;
+          line-height: 110%;
+          text-transform: uppercase;
+        }
       }
     }
-  }
 
-  #about-us-page-section-4 {
-    .width-wrapper {
-      .blocks-wrapper {
-        display: flex;
-        flex-direction: row;
-        align-items: stretch;
-        justify-content: stretch;
-        height: 800px;
-        padding: 0px 0px 180px 0px;
+    #about-us-page-section-4 {
+      .width-wrapper {
+        .blocks-wrapper {
+          display: flex;
+          flex-direction: row;
+          align-items: stretch;
+          justify-content: stretch;
+          height: 800px;
+          padding: 0px 0px 180px 0px;
 
-        .block {
-          &.block-1 {
-            width: 421px;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-          }
+          .block {
+            &.block-1 {
+              width: 421px;
+              display: flex;
+              align-items: center;
+              justify-content: flex-start;
+            }
 
-          &.block-2 {
-            flex: 1;
-            position: relative;
-            .map-container {
-              position: absolute;
-              top: 0px;
-              left: 0px;
-              bottom: 0px;
-              width: 1364px;
-              overflow: hidden;
+            &.block-2 {
+              flex: 1;
+              position: relative;
+              .map-container {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                bottom: 0px;
+                width: 1364px;
+                overflow: hidden;
 
-              .map-inner-wrapper {
-                position: relative;
-                width: 100%;
-                height: 100%;
-
-                img {
-                  position: absolute;
-                  display: block;
-                  width: 100%;
-                  height: 100%;
-                }
-
-                .map-points-wrapper {
+                .map-inner-wrapper {
                   position: relative;
                   width: 100%;
                   height: 100%;
-                  .map-point {
+
+                  img {
                     position: absolute;
-                    display: inline-block;
-                    color: $color_white;
-                    text-align: center;
-                    font-size: 20px;
-                    font-weight: 600;
-                    line-height: 120%;
-                    letter-spacing: 1.4px;
-                    text-transform: uppercase;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                  }
 
-                    &:hover {
-                      color: $color_gold;
-                    }
+                  .map-points-wrapper {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    .map-point {
+                      position: absolute;
+                      display: inline-block;
+                      color: $color_white;
+                      text-align: center;
+                      font-size: 20px;
+                      font-weight: 600;
+                      line-height: 120%;
+                      letter-spacing: 1.4px;
+                      text-transform: uppercase;
 
-                    &.san-francisco {
-                      top: 334px;
-                      left: 125px;
-                    }
-                    &.netherlands {
-                      top: 254px;
-                      left: 594px;
-                    }
-                    &.switzerland {
-                      top: 295px;
-                      left: 553px;
-                    }
-                    &.spain {
-                      top: 338px;
-                      left: 597px;
-                    }
-                    &.latvia {
-                      top: 213px;
-                      left: 768px;
-                    }
-                    &.italy {
-                      top: 328px;
-                      left: 730px;
-                    }
-                    &.malta {
-                      top: 384px;
-                      left: 729px;
-                    }
-                    &.cyprus {
-                      top: 359px;
-                      left: 825px;
-                    }
-                    &.russia {
-                      top: 158px;
-                      left: 993px;
+                      &:hover {
+                        color: $color_gold;
+                      }
+
+                      &.san-francisco {
+                        top: 334px;
+                        left: 125px;
+                      }
+                      &.netherlands {
+                        top: 254px;
+                        left: 594px;
+                      }
+                      &.switzerland {
+                        top: 295px;
+                        left: 553px;
+                      }
+                      &.spain {
+                        top: 338px;
+                        left: 597px;
+                      }
+                      &.latvia {
+                        top: 213px;
+                        left: 768px;
+                      }
+                      &.italy {
+                        top: 328px;
+                        left: 730px;
+                      }
+                      &.malta {
+                        top: 384px;
+                        left: 729px;
+                      }
+                      &.cyprus {
+                        top: 359px;
+                        left: 825px;
+                      }
+                      &.russia {
+                        top: 158px;
+                        left: 993px;
+                      }
                     }
                   }
                 }
@@ -2951,58 +2968,58 @@ footer {
           }
         }
       }
-
     }
-  }
 
-  #about-us-page-section-5 {
-    .width-wrapper {
-      .staff-block {
-        .staff-item-list {
-          display: flex;
-          flex-direction: row;
-          align-items: stretch;
-          justify-content: stretch;
-
-          .staff-item {
+    #about-us-page-section-5 {
+      .width-wrapper {
+        .staff-block {
+          .staff-item-list {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             align-items: stretch;
             justify-content: stretch;
-            border: 1px solid $color_gold;
-            margin: 0px 30px 0px 0px;
 
-            &:last-child {
-              margin: 0px 0px 0px 0px;
-            }
+            .staff-item {
+              display: flex;
+              flex-direction: column;
+              align-items: stretch;
+              justify-content: stretch;
+              border: 1px solid $color_gold;
+              margin: 0px 30px 0px 0px;
 
-            .image-wrapper {
-              height: 300px;
-
-              img {
-                display: block;
-                width: 100%;
-                height: 100%;
+              &:last-child {
+                margin: 0px 0px 0px 0px;
               }
-            }
-            .name {
-              color: $color_white;
-              font-size: 20px;
-              font-weight: 600;
-              line-height: 120%;
-              letter-spacing: 1.4px;
-              text-transform: uppercase;
-              background-color: $color_gold;
-              padding: 20px 24px 22px;
-            }
-            .info-block {
-              padding: 20px 24px 24px;
 
-              .info-text {
+              .image-wrapper {
+                height: 300px;
+
+                img {
+                  display: block;
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+              .name {
                 color: $color_white;
-                font-size: 15px;
-                font-weight: 400;
-                line-height: 140%;
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 120%;
+                letter-spacing: 1.4px;
+                text-transform: uppercase;
+                background-color: $color_gold;
+                padding: 20px 24px 22px;
+              }
+
+              .info-block {
+                padding: 20px 24px 24px;
+
+                .info-text {
+                  color: $color_white;
+                  font-size: 15px;
+                  font-weight: 400;
+                  line-height: 140%;
+                }
               }
             }
           }
@@ -3010,6 +3027,80 @@ footer {
       }
     }
   }
+
+  &.page-404-content {
+    #page-404-section-1 {
+      .width-wrapper {
+        .central-block {
+          position: relative;
+          width: 1090px;
+          height: 340px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 140px auto 0px;
+
+          .section-heading {
+            color: #B6A172;
+            text-align: center;
+            /* font-family: Aguila; */
+            font-size: 100px;
+            font-weight: 250;
+            line-height: 110%;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+          }
+
+          .section-background {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .section-text-1 {
+          width: 530px;
+          color: $color_white;
+          text-align: center;
+          font-size: 15px;
+          font-weight: 600;
+          line-height: 120%;
+          letter-spacing: 1.05px;
+          text-transform: uppercase;
+          margin: 140px auto 0px;
+        }
+
+        .section-menu {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          margin: 50px 0px 0px 0px;
+
+          .menu-item {
+            color: $color_gold;
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 120%;
+            letter-spacing: 1.05px;
+            text-transform: uppercase;
+            padding-bottom: 10px;
+            border-bottom: 1px solid $color_gold;
+            margin: 0px 40px 0px 0px;
+
+            &:last-child {
+              margin: 0px 0px 0px 0px;
+            }
+          }
+        }
+      }
+    }
+  }
+
 }
 
 /* Components */
@@ -3153,3 +3244,5 @@ footer {
     margin-right: auto;
   }
 }
+
+/* Fixes */
