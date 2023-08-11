@@ -74,7 +74,6 @@ header {
     align-items: center;
     justify-content: space-between;
     margin: 20px auto;
-    max-width: 1920px;
     width: 100%;
   }
 }
@@ -83,6 +82,7 @@ header {
 footer {
   background-color: $color_background;
   padding: 60px 0px;
+
   .width-wrapper {
     .information-block-list {
       display: flex;
@@ -175,7 +175,7 @@ footer {
           line-height: 120%;
           letter-spacing: 1.05px;
           text-transform: uppercase;
-          margin: 10px 0px 0px 0px;
+          margin: 20px 0px 0px 0px;
           padding: 16px 0px;
         }
       }
@@ -373,6 +373,8 @@ footer {
   align-items: stretch;
   justify-content: flex-start;
   background-color: $color_background;
+  padding: 0px 0px 180px 0px;
+
   .section-1 {
     .width-wrapper {
       margin: 0px 0px 0px 0px;
@@ -2055,8 +2057,6 @@ footer {
       align-items: center;
       padding: 10px 0px 50px;
       margin: 0px auto;
-      max-width: 1920px;
-      width: 100%;
       text-align: left;
     }
     .breadcrumb {
@@ -2584,13 +2584,173 @@ footer {
               width: 1090px;
               z-index: 20;
 
-              #order-design-project-form {
+              #order-design-project-form-block {
                 margin: 60px 0px 0px 0px;
               }
 
             }
           }
         }
+      }
+    }
+  }
+
+  &.contacts-page-content {
+    #contacts-page-section-1 {
+      padding: 50px 0px 100px;
+      border-bottom: 1px solid $color_gold;
+
+      .width-wrapper {
+        max-width: 1650px;
+
+        .section-info-block {
+          width: 530px;
+          margin: 0px auto;
+          
+          .section-heading {
+            color: $color_gold;
+            text-align: center;
+            font-family: Rosario;
+            font-size: 100px;
+            font-weight: 400;
+            line-height: 110%;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+          }
+          .section-subheading {
+            color: $color_white;
+            text-align: center;
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 120%;
+            letter-spacing: 1.05px;
+            text-transform: uppercase;
+            margin: 16px 0px 0px 0px;
+          }
+        }
+      }
+    }
+
+    #contacts-page-section-2 {
+      padding: 100px 0px;
+      .width-wrapper {
+        max-width: 1650px;
+
+        .contact-telephone {
+          color: $color_gold;
+          text-align: center;
+          font-size: 80px;
+          font-weight: 400;
+          line-height: 110%;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    #contacts-page-section-3 {
+      .width-wrapper {
+        max-width: 1650px;
+
+        .blocks-wrapper {
+          display: flex;
+          flex-direction: row;
+          align-items: stretch;
+          justify-content: stretch;
+          position: relative;
+          width: 100%;
+          height: 707px;
+
+          .block {
+            &.block-1 {
+              position: absolute;
+              flex: 1;
+              display: flex;
+              align-items: stretch;
+              justify-content: stretch;
+
+              .map-wrapper {
+                flex: 1;
+                height: 100%;
+                overflow: hidden;
+
+                img {
+                  display: block;
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+            }
+
+            &.block-2 {
+              flex: 1;
+              position: relative;
+              display: flex;
+              flex-direction: row;
+              align-items: flex-end;
+              justify-content: space-between;
+
+              .email {
+                color: $color_gold;
+                font-size: 32px;
+                font-weight: 400;
+                line-height: 110%;
+                text-transform: uppercase;
+              }
+
+              .social-block {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+                margin: 0px 700px 0px 0px;
+
+                .social-block-heading {
+                  color: $color_white;
+                  font-size: 15px;
+                  font-weight: 600;
+                  line-height: 120%;
+                  letter-spacing: 1.05px;
+                  text-transform: uppercase;
+                }
+                .social-item-list {
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  justify-content: center;
+
+                  .social-list-item {
+                    margin: 0px 0px 0px 12px;
+
+                    svg {
+                      path {
+                        fill: $color_gold;
+                      }
+                    }
+                  }
+                }
+              }
+
+              #news-letter-subscribe-form-block {
+                width: 530px;
+                height: 427px;
+                position: absolute;
+                right: 140px;
+                bottom: 0px;
+                padding: 50px 60px 60px;
+
+                .form-wrapper {
+                  form {
+                    .submit-button {
+                      display: block;
+                      text-align: center;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
       }
     }
   }
@@ -2604,7 +2764,7 @@ footer {
   padding: 120px 140px 140px;
   box-sizing: border-box;
 
-  .form-inner-wrapper {
+  .form-wrapper {
     form {
       .form-heading {
         color: $color_gold;
@@ -2614,7 +2774,7 @@ footer {
         font-weight: 400;
         line-height: 110%;
         text-transform: uppercase;
-        margin: 0px 0px 0px 0px;
+        margin: 0px 0px 40px 0px;
       }
       .form-group {
         display: flex;
@@ -2653,10 +2813,17 @@ footer {
 
         &.checkbox {
           border-bottom: none;
+          margin: 30px 0px 0px 0px;
 
           label {
             color: $color_grey;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%;
             text-transform: none;
+            margin: 0px 0px 0px 10px;
+
             .gold-text {
               color: $color_gold;
             }
@@ -2683,7 +2850,7 @@ footer {
           }
         }
       }
-      .send-button {
+      .submit-button {
         display: inline-block;
         color: $color_white;
         font-size: 15px;
@@ -2702,7 +2869,7 @@ footer {
 /* Resolutions */
 @media only screen and (min-width: 1920px) {
   .width-wrapper {
-    max-width: 1920px;
+    max-width: 1650px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
