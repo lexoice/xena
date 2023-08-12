@@ -1408,46 +1408,39 @@ footer {
       flex-direction: column;
       align-items: flex-start;
       justify-content: flex-end;
-      position: absolute; }
+      position: absolute;
+      transition: all 0.3s; }
+      .carousel-type-3 .carousel-item-list .carousel-item .view-project-button {
+        opacity: 0;
+        pointer-events: none;
+        z-index: -1;
+        transition: all 0.3s; }
       .carousel-type-3 .carousel-item-list .carousel-item.carousel-item-state-1 {
         width: 670px;
         height: 700px;
         top: 0;
         left: 0;
-        z-index: 100; }
+        z-index: 100;
+        transition: all 0.3s; }
       .carousel-type-3 .carousel-item-list .carousel-item.carousel-item-state-2 {
         width: 530px;
         height: 600px;
         top: 40px;
         left: 280px;
-        z-index: 300; }
+        z-index: 300;
+        transition: all 0.3s; }
         .carousel-type-3 .carousel-item-list .carousel-item.carousel-item-state-2 .view-project-button {
-          width: 120px;
-          height: 120px;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: center;
-          text-align: center;
-          font-size: 15px;
-          font-weight: 600;
-          line-height: 120%;
-          color: #F4F4F4;
-          background-color: #B6A172;
-          border-radius: 50%;
-          letter-spacing: 1.05px;
-          text-transform: uppercase;
-          z-index: 300; }
+          opacity: 1;
+          pointer-events: all;
+          z-index: 50;
+          transition: all 0.3s; }
       .carousel-type-3 .carousel-item-list .carousel-item.carousel-item-state-3 {
         width: 530px;
         height: 600px;
         top: 40px;
         left: 840px;
-        z-index: 100; }
+        z-index: 100;
+        transition: all 0.3s; }
       .carousel-type-3 .carousel-item-list .carousel-item .item-image-wrapper {
         position: absolute;
         top: 0;

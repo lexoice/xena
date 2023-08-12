@@ -1844,6 +1844,8 @@ footer {
 
           #main-page-section-10-carousel-1 {
             position: relative;
+
+
           }
         }
       }
@@ -1982,17 +1984,27 @@ footer {
 
 .carousel-type-3 {
   position: relative;
+
   .carousel-item-list {
     display: flex;
     flex-direction: row;
     position: relative;
     height: 700px;
+
     .carousel-item {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       justify-content: flex-end;
       position: absolute;
+      transition: all 0.3s;
+
+      .view-project-button {
+        opacity: 0;
+        pointer-events: none;
+        z-index: -1;
+        transition: all 0.3s;
+      }
 
       &.carousel-item-state-1 {
         width: 670px;
@@ -2000,6 +2012,7 @@ footer {
         top: 0;
         left: 0;
         z-index: 100;
+        transition: all 0.3s;
       }
 
       &.carousel-item-state-2 {
@@ -2008,28 +2021,13 @@ footer {
         top: 40px;
         left: 280px;
         z-index: 300;
+        transition: all 0.3s;
 
         .view-project-button {
-          width: 120px;
-          height: 120px;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: center;
-          text-align: center;
-          font-size: 15px;
-          font-weight: 600;
-          line-height: 120%;
-          color: $color_white;
-          background-color: $color_gold;
-          border-radius: 50%;
-          letter-spacing: 1.05px;
-          text-transform: uppercase;
-          z-index: 300;
+          opacity: 1;
+          pointer-events: all;
+          z-index: 50;
+          transition: all 0.3s;
         }
       }
 
@@ -2039,6 +2037,7 @@ footer {
         top: 40px;
         left: 840px;
         z-index: 100;
+        transition: all 0.3s;
       }
 
       .item-image-wrapper {
