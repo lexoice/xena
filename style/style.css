@@ -1626,13 +1626,22 @@ footer {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: flex-start; }
+  justify-content: flex-start;
+  position: relative; }
   .carousel-type-6 .carousel-item-list .carousel-item {
     display: flex;
     flex-direction: column;
     align-items: stretch;
     justify-content: stretch;
-    margin: 0px 30px 0px 0px; }
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    opacity: 0;
+    margin: 0px 30px 0px 0px;
+    transition: all 0.3s; }
     .carousel-type-6 .carousel-item-list .carousel-item .item-image-wrapper {
       width: 100%;
       position: relative; }
@@ -1694,30 +1703,51 @@ footer {
         display: inline-block;
         padding-bottom: 10px;
         border-bottom: 1px solid #B6A172; }
-    .carousel-type-6 .carousel-item-list .carousel-item.item-state-1 {
+    .carousel-type-6 .carousel-item-list .carousel-item.carousel-item-state-1 {
       width: 390px;
-      height: 250px; }
-      .carousel-type-6 .carousel-item-list .carousel-item.item-state-1 .item-image-wrapper {
+      height: 250px;
+      top: auto;
+      left: auto;
+      position: relative;
+      opacity: 1;
+      z-index: 50;
+      transition: all 0.3s; }
+      .carousel-type-6 .carousel-item-list .carousel-item.carousel-item-state-1 .item-image-wrapper {
         width: 390px; }
-    .carousel-type-6 .carousel-item-list .carousel-item.item-state-2 {
+    .carousel-type-6 .carousel-item-list .carousel-item.carousel-item-state-2 {
       width: 530px;
       height: 350px;
-      display: flex; }
-      .carousel-type-6 .carousel-item-list .carousel-item.item-state-2 .item-image-wrapper {
+      display: flex;
+      top: auto;
+      left: auto;
+      position: relative;
+      opacity: 1;
+      z-index: 50; }
+      .carousel-type-6 .carousel-item-list .carousel-item.carousel-item-state-2 .item-image-wrapper {
         width: 530px; }
-      .carousel-type-6 .carousel-item-list .carousel-item.item-state-2 .item-information-container {
+      .carousel-type-6 .carousel-item-list .carousel-item.carousel-item-state-2 .item-information-container {
         display: flex; }
-    .carousel-type-6 .carousel-item-list .carousel-item.item-state-3 {
+    .carousel-type-6 .carousel-item-list .carousel-item.carousel-item-state-3 {
       width: 250px;
       height: 150px;
-      display: flex; }
-      .carousel-type-6 .carousel-item-list .carousel-item.item-state-3 .item-image-wrapper {
+      display: flex;
+      top: auto;
+      left: auto;
+      position: relative;
+      opacity: 1;
+      z-index: 50; }
+      .carousel-type-6 .carousel-item-list .carousel-item.carousel-item-state-3 .item-image-wrapper {
         width: 250px; }
-    .carousel-type-6 .carousel-item-list .carousel-item.item-state-4 {
+    .carousel-type-6 .carousel-item-list .carousel-item.carousel-item-state-4 {
       width: 250px;
       height: 150px;
-      display: flex; }
-      .carousel-type-6 .carousel-item-list .carousel-item.item-state-4 .item-image-wrapper {
+      display: flex;
+      top: auto;
+      left: auto;
+      position: relative;
+      opacity: 1;
+      z-index: 50; }
+      .carousel-type-6 .carousel-item-list .carousel-item.carousel-item-state-4 .item-image-wrapper {
         width: 250px; }
 .carousel-type-6 .carousel-pagination-arrows {
   color: #B6A172;
