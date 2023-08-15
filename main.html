@@ -11,10 +11,86 @@
     <script type="text/javascript" src="./js/carousels/carousel_type_3.js"></script>
   </head>
   <body>
+    <div id="request-call-modal" class="dialog-modal">
+      <div class="modal-inner-wrapper">
+        <div class="modal-dark-overlay" onclick="toggleModal('#request-call-modal', 'clode');"></div>
+        <div class="modal-form-outer-wrapper">
+          <a class="modal-close-button" onclick="toggleModal('#request-call-modal', 'clode');">
+            <svg viewBox="0 0 30 30">
+              <line x1="0" y1="0" x2="30" y2="30" />
+              <line x1="0" y1="30" x2="30" y2="0" />
+            </svg>
+          </a>
+          <form action="" method="post" enctype="multipart/form-data">
+            <div class="modal-form-inner-wrapper">
+              <h1 class="modal-form-heading form-heading">Заказать обратный звонок</h1>
+              <div class="form-group name">
+                <label for="request-call-form-name-input">Ваше имя</label>
+                <input type="text" name="request_call_form_name_input" value="" placeholder="" id="request-call-form-name-input" />
+              </div>
+              <div class="form-group telephone">
+                <label for="request-call-form-telephone-input">Телефон</label>
+                <input type="text" name="request_call_form_telephone_input" value="" placeholder="" id="request-call-form-telephone-input" />
+              </div>
+              <div class="privacy-policy-text">нажимая на кнопку "оставить заявку", вы принимаете <a class="privacy-policy-link" target="_blank" href="#">условия</a> обработки персональных данных</div>
+              <a class="submit-button" onclick="sendCallRequest();">оставить заявку</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div id="order-a-project-modal" class="dialog-modal">
+      <div class="modal-inner-wrapper">
+        <div class="modal-dark-overlay" onclick="toggleModal('#order-a-project-modal', 'close');"></div>
+        <div class="modal-form-outer-wrapper">
+          <a class="modal-close-button" onclick="toggleModal('#order-a-project-modal', 'close');">
+            <svg viewBox="0 0 30 30">
+              <line x1="0" y1="0" x2="30" y2="30" />
+              <line x1="0" y1="30" x2="30" y2="0" />
+            </svg>
+          </a>
+          <form action="" method="post" enctype="multipart/form-data">
+            <div class="modal-form-inner-wrapper">
+              <h2 class="form-heading">order design project</h2>
+              <div class="form-row">
+                <div class="form-group name">
+                  <label for="order-design-form-name">name</label>
+                  <input type="text" name="order_design_form_name" value="" placeholdder="" id="order-design-form-name" />
+                </div>
+                <div class="form-group email">
+                  <label for="order-design-form-email">email</label>
+                  <input type="text" name="order_design_form_email" value="" placeholdder="" id="order-design-form-email" />
+                </div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-group-textarea" name="order_design_form_comment" placeholder=""></textarea>
+              </div>
+              <div class="form-group checkbox agreement">
+                <input type="checkbox" name="order_design_form_agreement" value="1" id="order-design-form-agreement" />
+                <label for="order-design-form-agreement">I agree with the processing of&nbsp;<a class="privacy-policy-link gold-text" href="#">personal data<a/></label>
+                </div>
+                <a class="submit-button" onclick="sendOrderAProjectRequest();">Send</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      function sendCallRequest() {
+        console.log("Perform sending Call Request");
+      }
+
+      function sendOrderAProjectRequest() {
+        console.log("Perform sending Order A Project Request");
+      }
+    </script>
+
     <header id="header" class="">
       <div class="width-wrapper">
         <div id="main-menu" class="">
-          <a id="menu-toggle-button" class="burger-button" onclick="toggleMainMenu();">
+          <a id="menu-toggle-button" class="button burger-button" onclick="toggleMainMenu();">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
               <path d="M2.75098e-07 18.923C2.75098e-07 18.6681 0.206638 18.4615 0.461539 18.4615H23.5385C23.7934 18.4615 24 18.6681 24 18.923C24 19.1779 23.7934 19.3846 23.5385 19.3846H0.461539C0.206638 19.3846 2.75098e-07 19.1779 2.75098e-07 18.923Z" fill="#B6A172"/>
               <path d="M0 11.5384C0 11.2835 0.206638 11.0769 0.461538 11.0769H16.1538C16.4087 11.0769 16.6154 11.2835 16.6154 11.5384C16.6154 11.7933 16.4087 12 16.1538 12H0.461539C0.206638 12 0 11.7933 0 11.5384Z" fill="#B6A172"/>
@@ -24,15 +100,15 @@
           </a>
         </div>
         <div class="language">
-          <a class="language-link active">En</a>
+          <a class="language-link link active">En</a>
           <span class="lang-toggle">
             <span class="lang-mark en active"></span>
             <span class="lang-mark ru"></span>
           </span>
-          <a class="language-link">Ru</a>
+          <a class="language-link link">Ru</a>
         </div>
         <div class="search">
-          <a class="button-search" onclick="">
+          <a class="button-search button" onclick="">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
               <path d="M20.0465 19.3385L16.14 15.4325C17.3413 14.0705 18.0029 12.3161 18 10.5C18 8.4965 17.22 6.613 15.8035 5.1965C14.387 3.78 12.5035 3 10.5005 3C8.4975 3 6.6135 3.78 5.1965 5.196C3.7795 6.612 3 8.496 3 10.4995C3 12.503 3.78 14.386 5.1965 15.8025C6.613 17.219 8.4965 17.9995 10.5 17.9995C12.335 17.9995 14.065 17.338 15.4325 16.139L19.3385 20.045C19.3848 20.0916 19.4399 20.1286 19.5006 20.1538C19.5612 20.179 19.6263 20.192 19.692 20.192C19.7577 20.192 19.8228 20.179 19.8834 20.1538C19.9441 20.1286 19.9992 20.0916 20.0455 20.045C20.1392 19.9512 20.1919 19.8241 20.1919 19.6915C20.1919 19.5589 20.1392 19.4318 20.0455 19.338L20.0465 19.3385ZM5.9035 15.096C4.676 13.868 4 12.236 4 10.5C4 8.764 4.676 7.1315 5.9035 5.9035C7.1315 4.676 8.7635 4 10.5 4C12.2365 4 13.8685 4.676 15.0965 5.9035C16.324 7.1315 17.0005 8.7635 17.0005 10.5C17.0005 12.2365 16.324 13.868 15.0965 15.096C13.8685 16.3235 12.2365 17 10.5005 17C8.7645 17 7.131 16.3235 5.9035 15.096Z" fill="#F4F4F4"/>
             </svg>
@@ -62,16 +138,29 @@
           </svg>
         </div>
 
-        <a id="top-request-call-button" class="">
+        <a id="top-request-call-button" class="button" onclick="toggleModal('#request-call-modal', 'open');">
           <div class="rectangles-block">
-            <span class="inner-rectangle-1"></span>
+            <div class="block-inner-wrapper">
+              <span class="inner-rectangle-1"></span>
+              <span class="inner-rectangle-2"></span>
+            </div>
           </div>
           <p class="button-text">request a call</p>
         </a>
-        <a id="button-order-a-project">
+        <a id="button-order-a-project" class="button" onclick="toggleModal('#order-a-project-modal', 'open')">
           order a project
         </a>
       </div>
+
+      <script type="text/javascript">
+        function toggleModal(modal_selector, action) {
+          if(action == 'open') {
+            $(modal_selector).addClass('active');
+          } else {
+            $(modal_selector).removeClass('active');
+          }
+        }
+      </script>
 
       <div id="main-menu-dialog" class="">
         <div class="width-wrapper">
