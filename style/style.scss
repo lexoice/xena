@@ -26,7 +26,8 @@ $color_white: #F4F4F4;
 }
 
 *, *:hover {
-  transition: all 0.3s ease-out;
+  transition: all 0.5s;
+  --transition-easing: cubic-bezier(0.25,0.74,0.22,0.99);
 }
 
 a {
@@ -252,15 +253,17 @@ footer {
   position: absolute;
   align-items: stretch;
   justify-content: stretch;
-  display: none;
+  display: flex;
   transition: 0.2s all ease-out;
   width: 1920px;
   height: 980px;
   background-color: $color_background;
   transform: translate(-50%, 0);
-  top: 100%;
   left: 50%;
-  z-index: 1000;
+  z-index: -1;
+  top: -1500px;
+  opacity: 0;
+  pointer-events: none;
 
   .width-wrapper {
     max-width: 1920px;
@@ -305,11 +308,28 @@ footer {
                 width: 24px;
                 height: 24px;
               }
+
+              &:hover {
+                svg {
+                  transform: rotateZ(360deg);
+                  path {
+                    fill: $color_gold;
+                  }
+                }
+              }
             }
 
             .menu-item-list {
               .menu-item {
-                margin: 40px 0px 0px 0px;
+                opacity: 0;
+                margin: 80px 0px 0px 0px;
+                transition: all 0.5s ease-out;
+
+                &.activated {
+                  margin: 40px 0px 0px 0px;
+                  opacity: 1;
+                  transition: all 0.5s ease-out;
+                }
 
                 &:first-child {
                   margin: 0px 0px 0px 0px;
@@ -489,6 +509,7 @@ footer {
                 position: absolute;
                 width: 100%;
                 height: 100%;
+                transition: all 0.5s;
 
                 .carousel-item {
                   width: 530px;
@@ -513,11 +534,19 @@ footer {
                     left: 0px;
                     right: 0px;
                     bottom: 0px;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    opacity: 1;
                   }
 
-                  &:nth-child(2n) {
+                  &.active {
                     .dark-overlay {
+                      position: absolute;
+                      top: 0px;
+                      left: 0px;
+                      right: 0px;
+                      bottom: 0px;
                       background-color: rgba(0, 0, 0, 0.5);
+                      opacity: 0;
                     }
                   }
                 }
@@ -532,7 +561,7 @@ footer {
 
               &.gallery-carousel-2 {
                 .gallery-carousel-item-list {
-                  top: -163px;
+                  bottom: 0px;
                 }
               }
             }
@@ -543,7 +572,10 @@ footer {
   }
 
   &.active {
-    display: flex;
+    top: 100%;
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 1000;
     transition: 0.2s all ease-out;
   }
 }
