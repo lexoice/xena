@@ -5,11 +5,7 @@
     <link rel="stylesheet" type="text/css" href="./style/style.css" />
     <script type="text/javascript" src="./js/jquery/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="./js/scripts.js"></script>
-    <script type="text/javascript" src="./js/carousels/main_page_top_carousel.js"></script>
-    <script type="text/javascript" src="./js/carousels/carousel_type_1.js"></script>
-    <script type="text/javascript" src="./js/carousels/carousel_type_2.js"></script>
-    <script type="text/javascript" src="./js/carousels/carousel_type_3.js"></script>
-    <script type="text/javascript" src="./js/parallax.js"></script>
+    <script type="text/javascript" src="./js/marquee_list.js"></script>
   </head>
   <body>
     <div id="request-call-modal" class="dialog-modal">
@@ -582,67 +578,77 @@
 
       <div id="partner-article-page-section-2" class="page-section">
         <div class="width-wrapper">
-          <div class="running-item-list-block">
+          <div class="marquee-item-list-block">
             <div class="item-list-container">
               <div class="list-item item-1">
                 <div class="image-wrapper">
                   <img src="./image/partner_article_gray_rectangle_1.png" alt="" title="" />
                   <div class="dark-overlay"></div>
                 </div>
+                <p class="test-item-number">1</p>
               </div>
               <div class="list-item item-2">
                 <div class="image-wrapper">
                   <img src="./image/partner_article_gray_rectangle_1.png" alt="" title="" />
                   <div class="dark-overlay"></div>
                 </div>
+                <p class="test-item-number">2</p>
               </div>
               <div class="list-item item-3">
                 <div class="image-wrapper">
                   <img src="./image/partner_article_gray_rectangle_1.png" alt="" title="" />
                   <div class="dark-overlay"></div>
                 </div>
+                <p class="test-item-number">3</p>
               </div>
               <div class="list-item item-4">
                 <div class="image-wrapper">
                   <img src="./image/partner_article_gray_rectangle_1.png" alt="" title="" />
                   <div class="dark-overlay"></div>
                 </div>
+                <p class="test-item-number">4</p>
               </div>
               <div class="list-item item-5">
                 <div class="image-wrapper">
                   <img src="./image/partner_article_gray_rectangle_1.png" alt="" title="" />
                   <div class="dark-overlay"></div>
                 </div>
+                <p class="test-item-number">5</p>
               </div>
               <div class="list-item item-6">
                 <div class="image-wrapper">
                   <img src="./image/partner_article_gray_rectangle_1.png" alt="" title="" />
                   <div class="dark-overlay"></div>
                 </div>
+                <p class="test-item-number">6</p>
               </div>
               <div class="list-item item-7">
                 <div class="image-wrapper">
                   <img src="./image/partner_article_gray_rectangle_1.png" alt="" title="" />
                   <div class="dark-overlay"></div>
                 </div>
+                <p class="test-item-number">7</p>
               </div>
               <div class="list-item item-8">
                 <div class="image-wrapper">
                   <img src="./image/partner_article_gray_rectangle_1.png" alt="" title="" />
                   <div class="dark-overlay"></div>
                 </div>
+                <p class="test-item-number">8</p>
               </div>
               <div class="list-item item-9">
                 <div class="image-wrapper">
                   <img src="./image/partner_article_gray_rectangle_1.png" alt="" title="" />
                   <div class="dark-overlay"></div>
                 </div>
+                <p class="test-item-number">9</p>
               </div>
               <div class="list-item item-10">
                 <div class="image-wrapper">
                   <img src="./image/partner_article_gray_rectangle_1.png" alt="" title="" />
                   <div class="dark-overlay"></div>
                 </div>
+                <p class="test-item-number">10</p>
               </div>
             </div>
           </div>
@@ -993,7 +999,7 @@ The design of loft style living room suggests the presence of dark furniture. Ho
                 </g>
               </svg>
             </div>
-            <a class="order-a-project-button" href="#">order a project</a>
+            <a class="order-a-project-button" onclick="toggleModal('#order-a-project-modal', 'open')">order a project</a>
           </div>
         </div>
       </div>
@@ -1005,3 +1011,11 @@ The design of loft style living room suggests the presence of dark furniture. Ho
     </div>
   </body>
 </html>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#partner-article-page-section-2 .marquee-item-list-block').marqueeList({
+      itemListContainerSelector: '#partner-article-page-section-2  .marquee-item-list-block .item-list-container',
+      scrollDuration: 30
+    });
+  });
+</script>

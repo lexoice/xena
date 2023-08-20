@@ -4951,7 +4951,7 @@ footer {
       padding: 100px 0px;
       .width-wrapper {
         max-width: 1920px;
-        .running-item-list-block {
+        .marquee-item-list-block {
           position: relative;
           height: 100px;
           overflow: hidden;
@@ -5192,7 +5192,16 @@ footer {
   }
 }
 
+/* Animations */
+@keyframes marquee_list_1 {
+  0% {
+    left: 0px;
+  }
 
+  100% {
+    left: -100%;
+  }
+}
 
 /* Components */
 .gold-text {
