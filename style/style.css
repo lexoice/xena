@@ -512,36 +512,37 @@ footer {
   background-color: #B6A172;
   margin: 0px 0px 0px 60px; }
 
+/*
 #content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-start;
-  background-color: #151616;
-  padding: 0px 0px 180px 0px;
-  perspective: 500px;
-  position: relative; }
-  #content .section-1 .width-wrapper {
-    margin: 0px 0px 0px 0px; }
-  #content .section-2 .width-wrapper {
-    margin: 0px 275px; }
-    #content .section-2 .width-wrapper .block-wrapper {
-      display: flex;
-      flex-direction: row;
-      align-items: stretch;
-      justify-content: stretch; }
-      #content .section-2 .width-wrapper .block-wrapper .block {
-        flex: 1; }
-      #content .section-2 .width-wrapper .block-wrapper .block-2 {
-        background: url("../image/section-1-block-2-background.jpg") transparent 0px 0px no-repeat;
-        background-size: cover; }
+  .section-1 {
+    .width-wrapper {
+      margin: 0px 0px 0px 0px;
+    }
+  }
 
-.page-section {
-  position: absolute;
-  right: 0px;
-  left: 0px; }
+  .section-2 {
+    .width-wrapper {
+      margin: 0px 275px;
+      .block-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: stretch;
+        .block {
+          flex: 1;
+        }
+        .block-1 {
 
+        }
+        .block-2 {
+          background: url('../image/section-1-block-2-background.jpg') transparent 0px 0px no-repeat;
+          background-size: cover;
+        }
+      }
+    }
+  }
+}
+*/
 #main-page-section-1 {
   position: absolute;
   top: 0;
@@ -1920,7 +1921,20 @@ footer {
 /* SPECIFIC PAGE STYLES*/
 /* Page Category*/
 #content {
-  min-height: 8000px; }
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  background-color: #151616;
+  padding: 0px 0px 180px 0px;
+  perspective: 500px;
+  position: relative;
+  /* min-height: 8000px; */ }
+  #content .page-section {
+    position: absolute;
+    right: 0px;
+    left: 0px; }
   #content #breadcrumbs {
     display: flex;
     align-items: center;
@@ -3271,6 +3285,116 @@ footer {
       max-width: 1920px;
       display: flex;
       justify-content: flex-end; }
+  #content.suppliers-page-content .page-section {
+    position: relative; }
+  #content.suppliers-page-content #suppliers-page-section-1 {
+    padding: 50px 0px 100px; }
+    #content.suppliers-page-content #suppliers-page-section-1 .width-wrapper {
+      max-width: 1650px; }
+      #content.suppliers-page-content #suppliers-page-section-1 .width-wrapper .info-wrapper {
+        width: 1090px;
+        margin: 0px auto; }
+        #content.suppliers-page-content #suppliers-page-section-1 .width-wrapper .info-wrapper .section-heading {
+          color: #B6A172;
+          text-align: center;
+          font-family: Rosario;
+          font-size: 100px;
+          font-weight: 400;
+          line-height: 110%;
+          letter-spacing: 5px;
+          text-transform: uppercase; }
+        #content.suppliers-page-content #suppliers-page-section-1 .width-wrapper .info-wrapper .section-subheading {
+          color: #F4F4F4;
+          text-align: center;
+          font-size: 15px;
+          font-weight: 600;
+          line-height: 120%;
+          letter-spacing: 1.05px;
+          text-transform: uppercase;
+          margin: 16px 0px 0px 0px; }
+  #content.suppliers-page-content #suppliers-page-section-2 .width-wrapper {
+    max-width: 1920px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start; }
+    #content.suppliers-page-content #suppliers-page-section-2 .width-wrapper .suppliers-block {
+      position: relative;
+      height: 350px;
+      margin: 0px 0px 30px 0px;
+      overflow: hidden; }
+      #content.suppliers-page-content #suppliers-page-section-2 .width-wrapper .suppliers-block:last-child {
+        margin: 0px 0px 0px 0px; }
+      #content.suppliers-page-content #suppliers-page-section-2 .width-wrapper .suppliers-block .supplier-item-list {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: flex-start;
+        position: absolute;
+        top: 0;
+        bottom: 0; }
+        #content.suppliers-page-content #suppliers-page-section-2 .width-wrapper .suppliers-block .supplier-item-list .suppliers-list-item {
+          position: relative;
+          width: 530px;
+          height: 350px;
+          margin: 0px 30px 0px 0px; }
+          #content.suppliers-page-content #suppliers-page-section-2 .width-wrapper .suppliers-block .supplier-item-list .suppliers-list-item:last-child {
+            margin: 0px 0px 0px 0px; }
+          #content.suppliers-page-content #suppliers-page-section-2 .width-wrapper .suppliers-block .supplier-item-list .suppliers-list-item .image-wrapper {
+            width: 100%;
+            height: 100%; }
+            #content.suppliers-page-content #suppliers-page-section-2 .width-wrapper .suppliers-block .supplier-item-list .suppliers-list-item .image-wrapper .dark-overlay {
+              opacity: 0; }
+          #content.suppliers-page-content #suppliers-page-section-2 .width-wrapper .suppliers-block .supplier-item-list .suppliers-list-item .info-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 30;
+            opacity: 0;
+            pointer-events: none; }
+            #content.suppliers-page-content #suppliers-page-section-2 .width-wrapper .suppliers-block .supplier-item-list .suppliers-list-item .info-wrapper .supplier-list-item-title {
+              color: #F4F4F4;
+              text-align: center;
+              font-family: Rosario;
+              font-size: 40px;
+              font-weight: 400;
+              line-height: 110%;
+              text-transform: uppercase; }
+            #content.suppliers-page-content #suppliers-page-section-2 .width-wrapper .suppliers-block .supplier-item-list .suppliers-list-item .info-wrapper .supplier-list-item-arrow-right {
+              width: 80px;
+              height: 80px;
+              border-radius: 50%;
+              background-color: #B6A172;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin: 40px 0px 0px 0px; }
+              #content.suppliers-page-content #suppliers-page-section-2 .width-wrapper .suppliers-block .supplier-item-list .suppliers-list-item .info-wrapper .supplier-list-item-arrow-right svg {
+                display: block;
+                width: 30px;
+                height: 10px; }
+                #content.suppliers-page-content #suppliers-page-section-2 .width-wrapper .suppliers-block .supplier-item-list .suppliers-list-item .info-wrapper .supplier-list-item-arrow-right svg path {
+                  fill: #fff; }
+          #content.suppliers-page-content #suppliers-page-section-2 .width-wrapper .suppliers-block .supplier-item-list .suppliers-list-item:hover .image-wrapper .dark-overlay {
+            opacity: 1; }
+          #content.suppliers-page-content #suppliers-page-section-2 .width-wrapper .suppliers-block .supplier-item-list .suppliers-list-item:hover .info-wrapper {
+            opacity: 1;
+            pointer-events: auto; }
+      #content.suppliers-page-content #suppliers-page-section-2 .width-wrapper .suppliers-block.suppliers-block-1 .supplier-item-list {
+        left: -145px; }
+      #content.suppliers-page-content #suppliers-page-section-2 .width-wrapper .suppliers-block.suppliers-block-2 .supplier-item-list {
+        left: -2px; }
+      #content.suppliers-page-content #suppliers-page-section-2 .width-wrapper .suppliers-block.suppliers-block-3 .supplier-item-list {
+        left: -145px; }
+      #content.suppliers-page-content #suppliers-page-section-2 .width-wrapper .suppliers-block.suppliers-block-4 .supplier-item-list {
+        left: -2px; }
+      #content.suppliers-page-content #suppliers-page-section-2 .width-wrapper .suppliers-block.suppliers-block-5 .supplier-item-list {
+        left: -145px; }
 
 /* Components */
 .heading-type-1 {
