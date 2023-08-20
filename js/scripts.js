@@ -28,3 +28,19 @@ function closeMainMenu() {
   $('#main-menu').removeClass('active');
   $('#main-menu-dialog').removeClass('active');
 }
+
+function toggleModal(modal_selector, action) {
+  if(action == 'open') {
+    $(modal_selector).addClass('active');
+  } else {
+    $(modal_selector).removeClass('active');
+  }
+}
+
+function sendCallRequest() {
+  console.log("Perform sending Call Request");
+}
+
+function sendOrderAProjectRequest() {
+  console.log("Perform sending Order A Project Request");
+}
