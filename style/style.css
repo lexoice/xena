@@ -4,7 +4,7 @@
   font-family: Rosario;
   src: url("fonts/Rosario/Rosario-VariableFont_wght.ttf"); }
 @font-face {
-  font-family: Rosario;
+  font-family: Aguila;
   src: url("fonts/Aguila/latinotype-aguila-thin.otf"); }
 /* Sizes */
 /* Styles */
@@ -1932,7 +1932,7 @@ footer {
   position: relative;
   /* min-height: 8000px; */ }
   #content .page-section {
-    position: absolute;
+    /* position: absolute; */
     right: 0px;
     left: 0px; }
   #content #breadcrumbs {
@@ -3035,43 +3035,7 @@ footer {
           line-height: 110%;
           text-transform: uppercase;
           margin: 80px 0px 0px 0px; }
-        #content.article-page-content #article-page-section-6 .width-wrapper .information-block-2 p {
-          color: #F4F4F4;
-          font-size: 15px;
-          font-weight: 400;
-          line-height: 140%;
-          margin: 30px 0px 30px 0px; }
-        #content.article-page-content #article-page-section-6 .width-wrapper .information-block-2 ol {
-          list-style: none;
-          counter-reset: list_counter_1;
-          margin: 0px 0px 0px 17px; }
-          #content.article-page-content #article-page-section-6 .width-wrapper .information-block-2 ol li {
-            counter-increment: list_counter_1;
-            position: relative;
-            color: #F4F4F4;
-            font-size: 15px;
-            font-weight: 400;
-            line-height: 140%;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            margin: 8px 0px 0px 0px; }
-            #content.article-page-content #article-page-section-6 .width-wrapper .information-block-2 ol li:before {
-              content: counter(list_counter_1);
-              display: block;
-              color: #B6A172;
-              text-align: center;
-              font-size: 15px;
-              font-weight: 700;
-              line-height: 140%;
-              margin: 0px 13px 0px 0px; }
         #content.article-page-content #article-page-section-6 .width-wrapper .information-block-2 h5 {
-          color: #B6A172;
-          font-family: Rosario;
-          font-size: 20px;
-          font-weight: 400;
-          line-height: 140%;
-          text-transform: uppercase;
           margin: 8px 0px 0px 0px; }
   #content.article-page-content #article-page-section-7 {
     padding: 80px 0px 0px 0px;
@@ -3395,6 +3359,8 @@ footer {
         left: -2px; }
       #content.suppliers-page-content #suppliers-page-section-2 .width-wrapper .suppliers-block.suppliers-block-5 .supplier-item-list {
         left: -145px; }
+  #content.personal-data-page-content #personal-data-page-section-1 {
+    padding: 0px 0px 0px 0px; }
 
 /* Components */
 .heading-type-1 {
@@ -3584,6 +3550,50 @@ form .submit-button {
   background-color: #B6A172;
   padding: 18px 30px 20px;
   margin: 60.5px 0px 0px 0px; }
+
+.information-block {
+  width: 810px;
+  margin-left: auto;
+  margin-right: auto; }
+  .information-block p {
+    color: #F4F4F4;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 140%; }
+  .information-block > p {
+    margin: 30px 0px; }
+  .information-block h5 {
+    color: #B6A172;
+    font-family: Rosario;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 140%;
+    text-transform: uppercase; }
+  .information-block ol {
+    list-style: none;
+    counter-reset: list_counter_1;
+    margin: 0px 0px 0px 0px; }
+    .information-block ol li {
+      counter-increment: list_counter_1;
+      position: relative;
+      color: #F4F4F4;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 140%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin: 8px 0px 0px 0px; }
+      .information-block ol li:before {
+        content: counter(list_counter_1);
+        display: block;
+        color: #B6A172;
+        text-align: center;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 140%;
+        padding: 0px 3px;
+        margin: 0px 13px 0px 0px; }
 
 .dialog-modal {
   display: flex;

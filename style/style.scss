@@ -11,7 +11,7 @@ $color_white: #F4F4F4;
 }
 
 @font-face {
-  font-family: Rosario;
+  font-family: Aguila;
   src: url('fonts/Aguila/latinotype-aguila-thin.otf');
 }
 
@@ -2749,7 +2749,7 @@ footer {
   /* min-height: 8000px; */
 
   .page-section {
-    position: absolute;
+    /* position: absolute; */
     right: 0px;
     left: 0px;
   }
@@ -4349,50 +4349,11 @@ footer {
             margin: 80px 0px 0px 0px;
           }
 
-          p {
-            color: $color_white;
-            font-size: 15px;
-            font-weight: 400;
-            line-height: 140%;
-            margin: 30px 0px 30px 0px;
-          }
 
-          ol {
-            list-style: none;
-            counter-reset: list_counter_1;
-            margin: 0px 0px 0px 17px;
-            li {
-              counter-increment: list_counter_1;
-              position: relative;
-              color: $color_white;
-              font-size: 15px;
-              font-weight: 400;
-              line-height: 140%;
-              display: flex;
-              align-items: center;
-              justify-content: flex-start;
-              margin: 8px 0px 0px 0px;
 
-              &:before {
-                content: counter(list_counter_1);
-                display: block;
-                color: $color_gold;
-                text-align: center;
-                font-size: 15px;
-                font-weight: 700;
-                line-height: 140%;
-                margin: 0px 13px 0px 0px;
-              }
-            }
-          }
+
 
           h5 {
-            color: $color_gold;
-            font-family: Rosario;
-            font-size: 20px;
-            font-weight: 400;
-            line-height: 140%;
-            text-transform: uppercase;
             margin: 8px 0px 0px 0px;
           }
         }
@@ -4901,8 +4862,12 @@ footer {
 
   &.personal-data-page-content {
     #personal-data-page-section-1 {
-      .width-wrapper {
+      padding: 0px 0px 0px 0px;
 
+      .width-wrapper {
+        .information-block-1 {
+
+        }
       }
     }
   }
@@ -5189,6 +5154,61 @@ form {
     background-color: $color_gold;
     padding: 18px 30px 20px;
     margin: 60.5px 0px 0px 0px;
+  }
+}
+
+.information-block {
+  width: 810px;
+  margin-left: auto;
+  margin-right: auto;
+  p {
+    color: $color_white;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 140%;
+  }
+
+  > p {
+    margin: 30px 0px;
+  }
+
+  h5 {
+    color: $color_gold;
+    font-family: Rosario;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 140%;
+    text-transform: uppercase;
+  }
+
+  ol {
+    list-style: none;
+    counter-reset: list_counter_1;
+    margin: 0px 0px 0px 0px;
+    li {
+      counter-increment: list_counter_1;
+      position: relative;
+      color: $color_white;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 140%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin: 8px 0px 0px 0px;
+
+      &:before {
+        content: counter(list_counter_1);
+        display: block;
+        color: $color_gold;
+        text-align: center;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 140%;
+        padding: 0px 3px;
+        margin: 0px 13px 0px 0px;
+      }
+    }
   }
 }
 
