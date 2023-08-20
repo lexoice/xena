@@ -1969,38 +1969,30 @@ footer {
         flex-direction: column;
         align-items: center;
         justify-content: center; }
-        #content.category-page-content #category-page-section-1 .width-wrapper .category-item-list .category-item:nth-child(odd) .category-image-wrapper .dark-overlay {
-          opacity: 0; }
-        #content.category-page-content #category-page-section-1 .width-wrapper .category-item-list .category-item:nth-child(odd):hover .category-image-wrapper .dark-overlay {
-          opacity: 1; }
-        #content.category-page-content #category-page-section-1 .width-wrapper .category-item-list .category-item:nth-child(even) .category-image-wrapper .dark-overlay {
-          opacity: 1; }
-        #content.category-page-content #category-page-section-1 .width-wrapper .category-item-list .category-item:nth-child(even):hover .category-image-wrapper .dark-overlay {
-          opacity: 0; }
         #content.category-page-content #category-page-section-1 .width-wrapper .category-item-list .category-item .category-image-wrapper {
           position: absolute;
           top: 0;
           left: 0;
           right: 0;
-          bottom: 0; }
+          bottom: 0;
+          overflow: hidden; }
           #content.category-page-content #category-page-section-1 .width-wrapper .category-item-list .category-item .category-image-wrapper img {
             display: block;
             width: 100%;
             height: 100%;
             z-index: -1; }
           #content.category-page-content #category-page-section-1 .width-wrapper .category-item-list .category-item .category-image-wrapper .dark-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 10; }
+            left: -100%; }
+          #content.category-page-content #category-page-section-1 .width-wrapper .category-item-list .category-item .category-image-wrapper .light-overlay {
+            left: 0px; }
         #content.category-page-content #category-page-section-1 .width-wrapper .category-item-list .category-item .category-information-wrapper {
-          display: none;
+          display: flex;
           flex-direction: column;
           align-items: center;
-          justify-content: center; }
+          justify-content: center;
+          opacity: 0;
+          pointer-events: none;
+          z-index: 50; }
           #content.category-page-content #category-page-section-1 .width-wrapper .category-item-list .category-item .category-information-wrapper .item-title {
             font-family: Rosario;
             font-size: 60px;
@@ -2030,14 +2022,37 @@ footer {
         #content.category-page-content #category-page-section-1 .width-wrapper .category-item-list .category-item.item-state-1 {
           width: 805px;
           height: 700px; }
-          #content.category-page-content #category-page-section-1 .width-wrapper .category-item-list .category-item.item-state-1 .category-information-wrapper {
-            display: flex; }
         #content.category-page-content #category-page-section-1 .width-wrapper .category-item-list .category-item.item-state-2 {
           width: 670px;
           height: 600px; }
         #content.category-page-content #category-page-section-1 .width-wrapper .category-item-list .category-item.item-state-3 {
           width: 385px;
           height: 600px; }
+        #content.category-page-content #category-page-section-1 .width-wrapper .category-item-list .category-item:hover .category-information-wrapper {
+          opacity: 1;
+          pointer-events: auto; }
+        #content.category-page-content #category-page-section-1 .width-wrapper .category-item-list .category-item.hover-action-type-1 .category-image-wrapper .dark-overlay {
+          left: 0px;
+          opacity: 1; }
+        #content.category-page-content #category-page-section-1 .width-wrapper .category-item-list .category-item.hover-action-type-1 .category-image-wrapper .light-overlay {
+          left: -100%;
+          opacity: 0; }
+        #content.category-page-content #category-page-section-1 .width-wrapper .category-item-list .category-item.hover-action-type-1 .category-information-wrapper .item-title {
+          color: #1a1a1a; }
+        #content.category-page-content #category-page-section-1 .width-wrapper .category-item-list .category-item.hover-action-type-1 .category-information-wrapper .item-subtitle {
+          color: #1a1a1a; }
+        #content.category-page-content #category-page-section-1 .width-wrapper .category-item-list .category-item.hover-action-type-1:hover .category-image-wrapper .dark-overlay {
+          left: 100%;
+          opacity: 0; }
+        #content.category-page-content #category-page-section-1 .width-wrapper .category-item-list .category-item.hover-action-type-1:hover .category-image-wrapper .light-overlay {
+          left: 0px;
+          opacity: 1; }
+        #content.category-page-content #category-page-section-1 .width-wrapper .category-item-list .category-item.hover-action-type-2 .category-image-wrapper .dark-overlay {
+          left: -100%;
+          opacity: 0; }
+        #content.category-page-content #category-page-section-1 .width-wrapper .category-item-list .category-item.hover-action-type-2:hover .category-image-wrapper .dark-overlay {
+          left: 0px;
+          opacity: 1; }
   #content.projects-page-content #projects-page-section-1 {
     width: 100%; }
     #content.projects-page-content #projects-page-section-1 .width-wrapper {
@@ -3477,6 +3492,24 @@ footer {
 .white-text {
   color: #F4F4F4 !important; }
 
+.light-overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 20; }
+
+.dark-overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20; }
+
 .heading-type-1 {
   color: #B6A172;
   text-align: center;
@@ -3581,15 +3614,14 @@ footer {
     height: 100%;
     transition: all 0.3s; }
   .item-image-wrapper .dark-overlay, .image-wrapper .dark-overlay {
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
-    right: 0;
     left: 0;
-    bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
     opacity: 1;
-    z-index: 20;
-    transition: all 0.3s; }
+    z-index: 20; }
   .item-image-wrapper:hover img, .image-wrapper:hover img {
     width: 120%;
     height: 120%;

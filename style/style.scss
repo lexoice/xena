@@ -2805,14 +2805,14 @@ footer {
             &:nth-child(odd) {
               .category-image-wrapper {
                 .dark-overlay {
-                  opacity: 0;
+
                 }
               }
 
               &:hover {
                 .category-image-wrapper {
                   .dark-overlay {
-                    opacity: 1;
+
                   }
                 }
               }
@@ -2821,14 +2821,14 @@ footer {
             &:nth-child(even) {
               .category-image-wrapper {
                 .dark-overlay {
-                  opacity: 1;
+
                 }
               }
 
               &:hover {
                 .category-image-wrapper {
                   .dark-overlay {
-                    opacity: 0;
+
                   }
                 }
               }
@@ -2840,6 +2840,7 @@ footer {
               left: 0;
               right: 0;
               bottom: 0;
+              overflow: hidden;
 
               img {
                 display: block;
@@ -2849,20 +2850,21 @@ footer {
               }
 
               .dark-overlay {
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background-color: rgba(0, 0, 0, 0.5);
-                z-index: 10;
+                left: -100%;
+              }
+
+              .light-overlay {
+                left: 0px;
               }
             }
             .category-information-wrapper {
-              display: none;
+              display: flex;
               flex-direction: column;
               align-items: center;
               justify-content: center;
+              opacity: 0;
+              pointer-events: none;
+              z-index: 50;
 
               .item-title {
                 font-family: Rosario;
@@ -2900,9 +2902,6 @@ footer {
             &.item-state-1 {
               width: 805px;
               height: 700px;
-              .category-information-wrapper {
-                display: flex;
-              }
             }
             &.item-state-2 {
               width: 670px;
@@ -2911,6 +2910,73 @@ footer {
             &.item-state-3 {
               width: 385px;
               height: 600px;
+            }
+
+            &:hover {
+              .category-image-wrapper {
+                .dark-overlay {
+
+                }
+              }
+              .category-information-wrapper {
+                opacity: 1;
+                pointer-events: auto;
+              }
+            }
+
+            &.hover-action-type-1 {
+              .category-image-wrapper {
+                .dark-overlay {
+                  left: 0px;
+                  opacity: 1;
+                }
+
+                .light-overlay {
+                  left: -100%;
+                  opacity: 0;
+                }
+              }
+
+              .category-information-wrapper {
+                .item-title {
+                  color: #1a1a1a;
+                }
+                .item-subtitle {
+                  color: #1a1a1a;
+                }
+              }
+
+              &:hover {
+                .category-image-wrapper {
+                  .dark-overlay {
+                    left: 100%;
+                    opacity: 0;
+                  }
+
+                  .light-overlay {
+                    left: 0px;
+                    opacity: 1;
+                  }
+                }
+              }
+            }
+
+            &.hover-action-type-2 {
+              .category-image-wrapper {
+                .dark-overlay {
+                  left: -100%;
+                  opacity: 0;
+                }
+              }
+
+              &:hover {
+                .category-image-wrapper {
+                  .dark-overlay {
+                    left: 0px;
+                    opacity: 1;
+                  }
+                }
+              }
             }
           }
         }
@@ -5137,6 +5203,26 @@ footer {
   color: $color_white!important;
 }
 
+.light-overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255,0.5);
+  z-index: 20;
+}
+
+.dark-overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+}
+
 .heading-type-1 {
   color: $color_gold;
   text-align: center;
@@ -5271,15 +5357,14 @@ footer {
   }
 
   .dark-overlay {
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
-    right: 0;
     left: 0;
-    bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
     opacity: 1;
     z-index: 20;
-    transition: all 0.3s;
   }
 
   &:hover {
