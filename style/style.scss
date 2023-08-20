@@ -3016,10 +3016,35 @@ footer {
               }
             }
 
+            &:hover {
+              .project-item-area-list-wrapper {
+                .project-item-area {
+                  .item-area-image-wrapper {
+                    .dark-overlay {
+                      opacity: 0;
+                    }
+                  }
+                }
+              }
+            }
+
             &:nth-child(odd) {
               .project-item-area-list-wrapper {
                 left: auto;
                 right: 0;
+              }
+
+              &:hover {
+                .project-item-area-list-wrapper {
+                  right: -100px;
+                  /*
+                  .project-item-area {
+                    &.area-2 {
+                      width: 170px;
+                    }
+                  }
+                  */
+                }
               }
             }
 
@@ -3027,6 +3052,19 @@ footer {
               .project-item-area-list-wrapper {
                 left: 0;
                 right: auto;
+              }
+
+              &:hover {
+                .project-item-area-list-wrapper {
+                  left: -100px;
+                  /*
+                  .project-item-area {
+                    &.area-2 {
+                      width: 170px;
+                    }
+                  }
+                  */
+                }
               }
             }
           }
