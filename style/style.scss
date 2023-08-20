@@ -3922,6 +3922,7 @@ footer {
               padding: 10px 10px 10px 16px;
 
               .filter-button {
+                cursor: pointer;
                 margin: 0px 10px 0px 0px;
 
                 svg {
@@ -3936,6 +3937,7 @@ footer {
                 flex-direction: row;
                 align-items: center;
                 justify-content: space-between;
+                cursor: pointer;
 
                 .button-text {
                   color: $color_white;
@@ -4041,6 +4043,7 @@ footer {
               display: inline-block;
               text-align: center;
               margin: 130px auto 0px;
+              padding-bottom: 10px;
               border-bottom: 1px solid $color_gold;
             }
           }
@@ -4054,51 +4057,6 @@ footer {
   &.article-page-content {
     .page-section {
       position: relative;
-
-      /*
-      .information-block {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        justify-content: stretch;
-        width: 810px;
-        margin: 0px auto 0px;
-        .block-heading {
-          color: $color_gold;
-          font-family: Rosario;
-          font-size: 60px;
-          font-weight: 400;
-          line-height: 110%;
-          text-align: left;
-          text-transform: uppercase;
-          margin: 0px 0px 30px 0px;
-        }
-
-        h5 {
-
-        }
-
-        p {
-
-        }
-
-        > p {
-
-        }
-
-        ul {
-          li {
-
-          }
-        }
-
-        ol {
-          li {
-
-          }
-        }
-      }
-      */
     }
 
     #article-page-section-1 {
@@ -4108,10 +4066,6 @@ footer {
 
         .top-banner {
           height: 850px;
-          position: relative;
-          display: flex;
-          align-items: center;
-          justify-content: center;
 
           .image-wrapper {
             position: absolute;
@@ -5207,6 +5161,7 @@ footer {
 
 .link-type-1 {
   color: $color_gold;
+  cursor: pointer;
 
   &:hover {
     color: $color_white;
@@ -5215,6 +5170,7 @@ footer {
 
 .link-type-2 {
   color: $color_white;
+  cursor: pointer;
 
   &:hover {
     color: $color_gold;
@@ -5229,6 +5185,7 @@ footer {
   height: 80px;
   border-radius: 50%;
   background-color: $color_gold;
+  cursor: pointer;
 
   svg {
     display: block;
