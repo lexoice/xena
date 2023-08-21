@@ -1013,9 +1013,16 @@ The design of loft style living room suggests the presence of dark furniture. Ho
 </html>
 <script type="text/javascript">
   $(document).ready(function() {
+    // Marquee list
     $('#partner-article-page-section-2 .marquee-item-list-block').marqueeList({
       itemListContainerSelector: '#partner-article-page-section-2  .marquee-item-list-block .item-list-container',
       scrollDuration: 30
+    });
+
+    // Parallax
+    $(window).on('scroll', function() {
+      var yPos = window.pageYOffset;
+      $('#partner-article-page-section-1').css('top', yPos * 0.3 + 'px');
     });
   });
 </script>

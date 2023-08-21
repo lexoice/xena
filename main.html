@@ -9,14 +9,13 @@
     <script type="text/javascript" src="./js/carousels/carousel_type_1.js"></script>
     <script type="text/javascript" src="./js/carousels/carousel_type_2.js"></script>
     <script type="text/javascript" src="./js/carousels/carousel_type_3.js"></script>
-    <script type="text/javascript" src="./js/carousels/main_menu_carousel.js"></script>
   </head>
   <body>
     <div id="request-call-modal" class="dialog-modal">
       <div class="modal-inner-wrapper">
-        <div class="modal-dark-overlay" onclick="toggleModal('#request-call-modal', 'clode');"></div>
+        <div class="modal-dark-overlay" onclick="toggleModal('#request-call-modal', 'close');"></div>
         <div class="modal-form-outer-wrapper">
-          <a class="modal-close-button" onclick="toggleModal('#request-call-modal', 'clode');">
+          <a class="modal-close-button" onclick="toggleModal('#request-call-modal', 'close');">
             <svg viewBox="0 0 30 30">
               <line x1="0" y1="0" x2="30" y2="30" />
               <line x1="0" y1="30" x2="30" y2="0" />
@@ -77,16 +76,6 @@
         </div>
       </div>
     </div>
-
-    <script type="text/javascript">
-      function sendCallRequest() {
-        console.log("Perform sending Call Request");
-      }
-
-      function sendOrderAProjectRequest() {
-        console.log("Perform sending Order A Project Request");
-      }
-    </script>
 
     <header id="header" class="">
       <div class="width-wrapper">
@@ -153,22 +142,12 @@
         </a>
       </div>
 
-      <script type="text/javascript">
-        function toggleModal(modal_selector, action) {
-          if(action == 'open') {
-            $(modal_selector).addClass('active');
-          } else {
-            $(modal_selector).removeClass('active');
-          }
-        }
-      </script>
-
       <div id="main-menu-dialog" class="">
         <div class="width-wrapper">
           <div class="blocks-wrapper">
             <div class="block block-1">
               <div class="site-navigation-block">
-                <a class="close-button" onclick="closeMainMenu();">
+                <a class="close-button" onclick="toggleMainMenu();">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6566 12.2928L0 0.960605L0.68687 0.292847L12.3434 11.6251L23.3131 0.960605L24 1.62836L13.0303 12.2928L24 22.9573L23.3131 23.6251L12.3434 12.9606L0.686871 24.2928L1.44747e-06 23.6251L11.6566 12.2928Z" fill="#B1B1B1"/>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6566 12.2928L0 0.960605L0.68687 0.292847L12.3434 11.6251L23.3131 0.960605L24 1.62836L13.0303 12.2928L24 22.9573L23.3131 23.6251L12.3434 12.9606L0.686871 24.2928L1.44747e-06 23.6251L11.6566 12.2928Z" fill="#B1B1B1"/>
@@ -363,25 +342,6 @@
                 </div>
               </div>
             </div>
-
-            <script type="text/javascript">
-              $(document).ready(function() {
-                $('#main-menu-dialog .main-menu-link.gallery-active-link').on('mouseover', function(e) {
-                  var gallery_1_target_slide = $('#main-menu-carousel-1').find('#main-menu-gallery-1-' + $(this).attr('data-gallery-item-id'));
-                  var gallery_1_target_slide_top = gallery_1_target_slide.position().top;
-
-                  $('#main-menu-carousel-1 .gallery-carousel-item-list').children().removeClass('active');
-                  $('#main-menu-carousel-1 .gallery-carousel-item-list').css('top', -gallery_1_target_slide_top + 200);
-                  $(gallery_1_target_slide).addClass('active');
-
-                  var gallery_2_target_slide = $('#main-menu-carousel-2').find('#main-menu-gallery-2-' + $(this).attr('data-gallery-item-id'));
-                  var gallery_2_target_slide_top = gallery_2_target_slide.position().top;
-                  $('#main-menu-carousel-2 .gallery-carousel-item-list').children().removeClass('active');
-                  $('#main-menu-carousel-2 .gallery-carousel-item-list').css('top', -gallery_2_target_slide_top + 300);
-                  $(gallery_2_target_slide).addClass('active');
-                });
-              });
-            </script>
 
             <div class="block block-2">
               <div class="carousel-gallery-block">
@@ -591,8 +551,9 @@
         </div>
       </div>
     </header>
+
     <div id="content" class="main-page-content">
-      <div id="main-page-section-1">
+      <div id="main-page-section-1" class="page-section">
         <div class="width-wrapper">
           <div id="main-top-carousel" class="carousel-type-1">
             <div class="carousel-item-list">
@@ -701,7 +662,7 @@
         </div>
       </div>
 
-      <div id="main-page-section-2" class="">
+      <div id="main-page-section-2" class="page-section">
         <div class="width-wrapper">
           <img class="bg-secondary-image-1" src="./image/main-page-section-2-bg-secondary-image-1.png" alt="" title="" />
 
@@ -785,7 +746,7 @@
         </div>
       </div>
 
-      <div id="main-page-section-3" class="">
+      <div id="main-page-section-3" class="page-section">
         <div class="width-wrapper">
           <div class="blocks-wrapper">
             <div class="block block-1">
@@ -857,7 +818,7 @@ AK studio (Exclusive boutique) was established in 2010. Our company works at all
         </div>
       </div>
 
-      <div id="main-page-section-4" class="">
+      <div id="main-page-section-4" class="page-section">
         <div class="width-wrapper">
           <div class="section-area section-top-area">
             <h1 class="section-heading">
@@ -902,7 +863,7 @@ AK studio (Exclusive boutique) was established in 2010. Our company works at all
         </div>
       </div>
 
-      <div id="main-page-section-5" class="">
+      <div id="main-page-section-5" class="page-section">
         <div class="width-wrapper">
           <img class="bg-image-1" src="./image/main-page-section-5-bg-image-1.png" alt="" title="" />
           <div class="outer-carousel-wrapper">
@@ -974,7 +935,7 @@ AK studio (Exclusive boutique) was established in 2010. Our company works at all
         </div>
       </div>
 
-      <div id="main-page-section-6" class="">
+      <div id="main-page-section-6" class="page-section">
         <div class="width-wrapper">
           <div class="section-area section-area-1">
             <div class="information-block">
@@ -1055,13 +1016,13 @@ AK studio (Exclusive boutique) was established in 2010. Our company works at all
         </div>
       </div>
 
-      <div id="main-page-section-7" class="">
+      <div id="main-page-section-7" class="page-section">
         <div class="width-wrapper">
 
         </div>
       </div>
 
-      <div id="main-page-section-8" class="">
+      <div id="main-page-section-8" class="page-section">
         <div class="width-wrapper">
           <div class="blocks-wrapper">
             <div class="block block-1">
@@ -1114,7 +1075,7 @@ AK studio (Exclusive boutique) was established in 2010. Our company works at all
         </div>
       </div>
 
-      <div id="main-page-section-9" class="">
+      <div id="main-page-section-9" class="page-section">
         <div class="width-wrapper">
           <div id="main-page-section-9-carousel-1" class="carousel-type-5">
             <div class="carousel-item-list">
@@ -1512,7 +1473,7 @@ AK studio (Exclusive boutique) was established in 2010. Our company works at all
         </div>
       </div>
 
-      <div id="main-page-section-10" class="">
+      <div id="main-page-section-10" class="page-section">
         <div class="width-wrapper">
           <div class="blocks-wrapper">
             <div class="block block-1">
@@ -1715,17 +1676,17 @@ AK studio (Exclusive boutique) was established in 2010. Our company works at all
         </div>
       </div>
 
-      <div id="main-page-section-11" class="">
+      <div id="main-page-section-11" class="page-section">
         <div class="width-wrapper">
           <div class="request-a-call-block">
             <p class="block-heading">Request a call</p>
             <h1 class="telephone-number">+357 25 32 06 32</h1>
-            <a class="send-call-request-button" onclick="">
-              <svg class="squares" xmlns="http://www.w3.org/2000/svg" width="161" height="160" viewBox="0 0 161 160" fill="none">
-                <rect x="31" y="30.5" width="99" height="99" stroke="#B6A172"/>
-                <rect opacity="0.5" x="16" y="15.5" width="129" height="129" stroke="#B6A172"/>
-                <rect opacity="0.2" x="1" y="0.5" width="159" height="159" stroke="#B6A172"/>
-              </svg>
+            <a class="send-call-request-button" onclick="toggleModal('#request-call-modal', 'open');">
+              <div class="rectangles-container">
+                <div class="rectangle rectangle-1"></div>
+                <div class="rectangle rectangle-2"></div>
+                <div class="rectangle rectangle-3"></div>
+              </div>
               <svg class="phone-icon" xmlns="http://www.w3.org/2000/svg" width="41" height="40" viewBox="0 0 41 40" fill="none">
                 <g clip-path="url(#clip0_126_223)">
                   <path d="M39.625 30C36.5 30 33.5 29.5 30.625 28.5H30.5C30.25 28.5 30 28.625 29.875 28.75L23.75 34.875L22.75 34.375C15.5 30.625 9.75 24.875 6.125 17.75L5.5 16.75L11.625 10.625C11.875 10.375 11.875 10.125 11.875 9.75C10.875 6.875 10.375 3.875 10.375 0.75C10.375 0.375 10.125 0 9.625 0H1.25C0.875 0 0.5 0.375 0.5 0.75C0.5 22.25 18 39.875 39.625 39.875C40 39.875 40.375 39.5 40.375 39.125V30.75C40.375 30.375 40 30 39.625 30ZM4 12.75C3 9.75 2.375 6.5 2.125 3.25L2 1.5H8.875L9 3C9.125 5 9.5 7 10 8.875L10.25 9.75L4.875 15.125L4 12.75ZM38.875 38.375L37.125 38.25C33.875 38 30.75 37.375 27.625 36.375L25.125 35.5L30.5 30.125L31.375 30.375C33.25 30.875 35.25 31.25 37.25 31.375L38.75 31.5V38.375H38.875Z" fill="#B6A172"/>
@@ -1742,6 +1703,7 @@ AK studio (Exclusive boutique) was established in 2010. Our company works at all
       </div>
 
     </div>
+
 
     <footer id="footer">
       <div class="width-wrapper">
@@ -1855,7 +1817,7 @@ AK studio (Exclusive boutique) was established in 2010. Our company works at all
                 </g>
               </svg>
             </div>
-            <a class="order-a-project-button" href="#">order a project</a>
+            <a class="order-a-project-button" onclick="toggleModal('#order-a-project-modal', 'open')">order a project</a>
           </div>
         </div>
       </div>
@@ -1869,6 +1831,23 @@ AK studio (Exclusive boutique) was established in 2010. Our company works at all
 </html>
 <script type="text/javascript">
   $(document).ready(function() {
+    // Main menu scripts
+    $('#main-menu-dialog .main-menu-link.gallery-active-link').on('mouseover', function(e) {
+      var gallery_1_target_slide = $('#main-menu-carousel-1').find('#main-menu-gallery-1-' + $(this).attr('data-gallery-item-id'));
+      var gallery_1_target_slide_top = gallery_1_target_slide.position().top;
+
+      $('#main-menu-carousel-1 .gallery-carousel-item-list').children().removeClass('active');
+      $('#main-menu-carousel-1 .gallery-carousel-item-list').css('top', -gallery_1_target_slide_top + 200);
+      $(gallery_1_target_slide).addClass('active');
+
+      var gallery_2_target_slide = $('#main-menu-carousel-2').find('#main-menu-gallery-2-' + $(this).attr('data-gallery-item-id'));
+      var gallery_2_target_slide_top = gallery_2_target_slide.position().top;
+      $('#main-menu-carousel-2 .gallery-carousel-item-list').children().removeClass('active');
+      $('#main-menu-carousel-2 .gallery-carousel-item-list').css('top', -gallery_2_target_slide_top + 300);
+      $(gallery_2_target_slide).addClass('active');
+    });
+
+    // Initialize carousels
     $('#main-top-carousel').mainTopCarousel();
 
     $('#main-page-section-3-carousel-1').carouselType1({
@@ -1882,16 +1861,19 @@ AK studio (Exclusive boutique) was established in 2010. Our company works at all
       buttonPrevSelector: '#main-page-section-2-carousel-1 .carousel-pagination-arrows .arrow-prev',
       buttonNextSelector: '#main-page-section-2-carousel-1 .carousel-pagination-arrows .arrow-next'
     });
+
     $('#main-page-section-5-carousel-1').carouselType2({
       itemListSelector: '#main-page-section-5-carousel-1 .carousel-item-list',
       buttonPrevSelector: '#main-page-section-5-carousel-1 .carousel-pagination-arrows .arrow-prev',
       buttonNextSelector: '#main-page-section-5-carousel-1 .carousel-pagination-arrows .arrow-next'
     });
+
     $('#main-page-section-6-carousel-1').carouselType2({
       itemListSelector: '#main-page-section-6-carousel-1 .carousel-item-list',
       buttonPrevSelector: '#main-page-section-6-carousel-1 .carousel-pagination-arrows .arrow-prev',
       buttonNextSelector: '#main-page-section-6-carousel-1 .carousel-pagination-arrows .arrow-next'
     });
+
     $('#main-page-section-9-carousel-1').carouselType2({
       itemListSelector: '#main-page-section-9-carousel-1 .carousel-item-list',
       buttonPrevSelector: '#main-page-section-9-carousel-1 .carousel-pagination-arrows .arrow-prev',
@@ -1902,6 +1884,12 @@ AK studio (Exclusive boutique) was established in 2010. Our company works at all
       itemListSelector: '#main-page-section-10-carousel-1 .carousel-item-list',
       buttonPrevSelector: '#main-page-section-10-carousel-1 .carousel-pagination-arrows .arrow-prev',
       buttonNextSelector: '#main-page-section-10-carousel-1 .carousel-pagination-arrows .arrow-next'
+    });
+
+    // Parallax
+    $(window).on('scroll', function() {
+      var yPos = window.pageYOffset;
+      $('#main-page-section-1').css('top', yPos * 0.3 + 'px');
     });
   });
 </script>
