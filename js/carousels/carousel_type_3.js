@@ -33,8 +33,6 @@
       for(var i = 1; i <= (settings.visibleItemStateClassnameList.length - 1); i++) {
         visibleItemIndexList.push(defineNextSlideIndex(visibleItemIndexList[i - 1]));
       }
-
-      console.log("t: ", visibleItemIndexList);
     }
 
     var refreshCarouselState = function() {
