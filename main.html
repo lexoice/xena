@@ -1932,7 +1932,22 @@ AK studio (Exclusive boutique) was established in 2010. Our company works at all
     // Parallax
     $(window).on('scroll', function() {
       var yPos = window.pageYOffset;
+      /*
       $('#main-page-section-1').css('top', yPos * 0.3 + 'px');
+
+      if(yPos > 950) {
+        $('#main-page-section-2 .width-wrapper .bg-secondary-image-1').css('top', (yPos - 950) * 0.2 - 381 + 'px');
+      }
+
+      if(yPos > 3547) {
+        $('#main-page-section-5 .width-wrapper .bg-image-1').css('top', (yPos - 3547) * 0.2 - 220 + 'px');
+      }
+
+      if(yPos > 4766) {
+        $('#main-page-section-6 .width-wrapper .bg-image-1').css('top', (yPos - 4766) * 0.2 - 220 + 'px');
+      }
+      */
+      $('#main-page-section-2').css('top', '-' + yPos * 0.3 + 'px');
     });
   });
 </script>
