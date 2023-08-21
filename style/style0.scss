@@ -2483,24 +2483,19 @@ footer {
                     align-items: stretch;
                     justify-content: stretch;
 
-                    .item-list-inner-wrapper {
+                    .carousel-item {
                       position: relative;
-                      height: 100%;
-                      .carousel-item {
-                        width: 312px;
-                        height: 476px;
-                        position: absolute;
-                        top: 0px;
-                        display: flex;
-                        flex-direction: row;
-                        align-items: stretch;
-                        justify-content: stretch;
-                        margin: 0px 30px 0px 0px;
-                      }
+                      display: flex;
+                      flex-direction: row;
+                      align-items: stretch;
+                      justify-content: stretch;
+                      margin: 0px 30px 0px 0px;
                     }
                   }
                 }
               }
+
+
             }
           }
         }

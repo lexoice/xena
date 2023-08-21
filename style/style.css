@@ -1726,22 +1726,37 @@ footer {
             display: block;
             height: 50px; }
         #content.main-page-content #main-page-section-8 .width-wrapper .blocks-wrapper .block.block-2 {
-          width: 312px;
           height: 476px; }
           #content.main-page-content #main-page-section-8 .width-wrapper .blocks-wrapper .block.block-2 #main-page-section-8-carousel-1 {
-            width: 100%;
+            width: 1085px;
             height: 100%; }
-            #content.main-page-content #main-page-section-8 .width-wrapper .blocks-wrapper .block.block-2 #main-page-section-8-carousel-1 .carousel-item-list {
-              display: flex;
-              flex-direction: row;
-              align-items: stretch;
-              justify-content: stretch; }
-              #content.main-page-content #main-page-section-8 .width-wrapper .blocks-wrapper .block.block-2 #main-page-section-8-carousel-1 .carousel-item-list .carousel-item {
+            #content.main-page-content #main-page-section-8 .width-wrapper .blocks-wrapper .block.block-2 #main-page-section-8-carousel-1 .carousel-item-list-outer-wrapper {
+              position: relative;
+              width: 1085px;
+              height: 476px;
+              overflow: hidden; }
+              #content.main-page-content #main-page-section-8 .width-wrapper .blocks-wrapper .block.block-2 #main-page-section-8-carousel-1 .carousel-item-list-outer-wrapper .carousel-item-list {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
                 display: flex;
                 flex-direction: row;
                 align-items: stretch;
-                justify-content: stretch;
-                margin: 0px 30px 0px 0px; }
+                justify-content: stretch; }
+                #content.main-page-content #main-page-section-8 .width-wrapper .blocks-wrapper .block.block-2 #main-page-section-8-carousel-1 .carousel-item-list-outer-wrapper .carousel-item-list .item-list-inner-wrapper {
+                  position: relative;
+                  height: 100%; }
+                  #content.main-page-content #main-page-section-8 .width-wrapper .blocks-wrapper .block.block-2 #main-page-section-8-carousel-1 .carousel-item-list-outer-wrapper .carousel-item-list .item-list-inner-wrapper .carousel-item {
+                    width: 312px;
+                    height: 476px;
+                    position: absolute;
+                    top: 0px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: stretch;
+                    justify-content: stretch;
+                    margin: 0px 30px 0px 0px; }
   #content.main-page-content #main-page-section-9 {
     background-color: #151616;
     overflow: hidden;
