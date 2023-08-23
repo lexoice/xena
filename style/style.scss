@@ -7,7 +7,9 @@ $color_white: #F4F4F4;
 /* Sizes */
 /* Base 1920px */
 
+
 /* Base 1366px */
+
 
 /* Base 320px */
 
@@ -23,7 +25,52 @@ $color_white: #F4F4F4;
   src: url('fonts/Aguila/latinotype-aguila-thin.otf');
 }
 
+/* Flex grid markup components */
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
 
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-stretch {
+  align-items: stretch;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-stretch {
+  justify-content: stretch;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
 
 /* Components */
 .gold-text {
@@ -402,7 +449,7 @@ body {
   align-items: stretch;
   justify-content: stretch;
   width: 100vw;
-  min-height: 100vh;
+  min-height: 8716px;
   overflow-x: hidden;
 }
 
@@ -1084,37 +1131,7 @@ footer {
   margin: 0px 0px 0px 60px;
 }
 
-/*
-#content {
-  .section-1 {
-    .width-wrapper {
-      margin: 0px 0px 0px 0px;
-    }
-  }
 
-  .section-2 {
-    .width-wrapper {
-      margin: 0px 275px;
-      .block-wrapper {
-        display: flex;
-        flex-direction: row;
-        align-items: stretch;
-        justify-content: stretch;
-        .block {
-          flex: 1;
-        }
-        .block-1 {
-
-        }
-        .block-2 {
-          background: url('../image/section-1-block-2-background.jpg') transparent 0px 0px no-repeat;
-          background-size: cover;
-        }
-      }
-    }
-  }
-}
-*/
 
 
 @keyframes animation2_1 {
@@ -1771,10 +1788,19 @@ footer {
   background-color: $color_background;
   padding: 0px 0px 180px 0px;
   position: relative;
+  width: 100%;
+  overflow: hidden;
 
   .page-section {
-    position: relative;
-    transition: none;
+    position: absolute;
+    opacity: 0;
+    left: 4000px;
+    width: 100%;
+
+    &.on-show {
+      left: 0px;
+      opacity: 1;
+    }
   }
 
   #breadcrumbs {
@@ -1814,12 +1840,24 @@ footer {
 
   &.main-page-content {
     #main-page-section-1 {
-      position: relative;
       height: 850px;
+      top: 0px;
       z-index: 10;
-      transition: none;
+
       .width-wrapper {
         max-width: 1920px;
+      }
+
+      &.on-show {
+        top: 0px;
+        opacity: 1;
+        left: 0px;
+      }
+
+      &.out-of-show-2 {
+        top: 0px;
+        opacity: 0;
+        left: -4000px;
       }
     }
 
@@ -2007,7 +2045,13 @@ footer {
       z-index: 2;
       overflow: hidden;
       z-index: 20;
-      transition: none;
+
+      &.on-show {
+        top: 850px;
+        left: 0;
+        opacity: 1;
+      }
+
       .width-wrapper {
         position: relative;
         max-width: 1370px;
@@ -2058,6 +2102,7 @@ footer {
     #main-page-section-2-carousel-1 {
       height: 398px;
       position: relative;
+      transition: none;
       .carousel-item-list {
         .carousel-item {
           display: flex;
@@ -2145,6 +2190,11 @@ footer {
       padding-bottom: 50px;
       overflow: hidden;
       z-index: 30;
+
+      &.on-show {
+        top: 1576px;
+      }
+
       .width-wrapper {
         .blocks-wrapper {
           display: flex;
@@ -2213,6 +2263,10 @@ footer {
       background-color: $color_background;
       padding: 0px 0px 170px 0px;
       z-index: 40;
+
+      &.on-show {
+        top: 2307px;
+      }
 
       .width-wrapper {
         display: flex;
@@ -2379,6 +2433,10 @@ footer {
       background-color: $color_background;
       z-index: 50;
 
+      &.on-show {
+        top: 3782px;
+      }
+
       .width-wrapper {
         max-width: 1652px;
         padding: 170px 0px 120px 0px;
@@ -2499,6 +2557,10 @@ footer {
 
     #main-page-section-6 {
       background-color: $color_background;
+
+      &.on-show {
+        top: 4492px;
+      }
 
       .bg-additional-image-1 {
         position: absolute;
@@ -2714,6 +2776,11 @@ footer {
       display: none;
       height: 654px;
       overflow: hidden;
+
+      &.on-show {
+        top: 5870;
+      }
+
       .width-wrapper {
 
       }
@@ -2722,6 +2789,11 @@ footer {
       background-color: $color_background;
       padding: 167px 0px 0px 0px;
       overflow: hidden;
+
+      &.on-show {
+        top: 5637px;
+      }
+
       .width-wrapper {
         .blocks-wrapper {
           display: flex;
@@ -2827,6 +2899,10 @@ footer {
       overflow: hidden;
       padding-top: 180px;
 
+      &.on-show {
+        top: 6258px;
+      }
+
       .width-wrapper {
         #main-page-section-9-carousel-1 {
           position: relative;
@@ -2895,6 +2971,11 @@ footer {
       background-color: $color_background;
       padding: 169px 0px 40px 0px;
       overflow: hidden;
+
+      &.on-show {
+        top: 6897px;
+      }
+
       .width-wrapper {
         .blocks-wrapper {
           display: flex;
@@ -2951,6 +3032,11 @@ footer {
       background-color: $color_background;
       padding: 100px 0px 0px 0px;
       overflow: hidden;
+
+      &.on-show {
+        top: 7650px;
+      }
+
       .width-wrapper {
         margin: 0px auto;
         display: flex;

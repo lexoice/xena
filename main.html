@@ -10,6 +10,7 @@
     <script type="text/javascript" src="./js/carousels/carousel_type_2.js"></script>
     <script type="text/javascript" src="./js/carousels/carousel_type_3.js"></script>
     <script type="text/javascript" src="./js/carousels/carousel_type_4.js"></script>
+    <script type="text/javascript" src="./js/page_scripts/main_page.js"></script>
   </head>
   <body>
     <div id="request-call-modal" class="dialog-modal">
@@ -1865,89 +1866,3 @@ AK studio (Exclusive boutique) was established in 2010. Our company works at all
     </div>
   </body>
 </html>
-<script type="text/javascript">
-  $(document).ready(function() {
-    // Main menu scripts
-    $('#main-menu-dialog .main-menu-link.gallery-active-link').on('mouseover', function(e) {
-      var gallery_1_target_slide = $('#main-menu-carousel-1').find('#main-menu-gallery-1-' + $(this).attr('data-gallery-item-id'));
-      var gallery_1_target_slide_top = gallery_1_target_slide.position().top;
-
-      $('#main-menu-carousel-1 .gallery-carousel-item-list').children().removeClass('active');
-      $('#main-menu-carousel-1 .gallery-carousel-item-list').css('top', -gallery_1_target_slide_top + 200);
-      $(gallery_1_target_slide).addClass('active');
-
-      var gallery_2_target_slide = $('#main-menu-carousel-2').find('#main-menu-gallery-2-' + $(this).attr('data-gallery-item-id'));
-      var gallery_2_target_slide_top = gallery_2_target_slide.position().top;
-      $('#main-menu-carousel-2 .gallery-carousel-item-list').children().removeClass('active');
-      $('#main-menu-carousel-2 .gallery-carousel-item-list').css('top', -gallery_2_target_slide_top + 300);
-      $(gallery_2_target_slide).addClass('active');
-    });
-
-    // Initialize carousels
-    $('#main-top-carousel').mainTopCarousel();
-
-    $('#main-page-section-3-carousel-1').carouselType1({
-      itemListSelector: '#main-page-section-3-carousel-1 .carousel-item-list',
-      buttonPrevSelector: '#main-page-section-3-carousel-1 .carousel-pagination-arrows .arrow-prev',
-      buttonNextSelector: '#main-page-section-3-carousel-1 .carousel-pagination-arrows .arrow-next'
-    });
-
-    $('#main-page-section-2-carousel-1').carouselType2({
-      itemListSelector: '#main-page-section-2-carousel-1 .carousel-item-list',
-      buttonPrevSelector: '#main-page-section-2-carousel-1 .carousel-pagination-arrows .arrow-prev',
-      buttonNextSelector: '#main-page-section-2-carousel-1 .carousel-pagination-arrows .arrow-next'
-    });
-
-    $('#main-page-section-5-carousel-1').carouselType2({
-      itemListSelector: '#main-page-section-5-carousel-1 .carousel-item-list',
-      buttonPrevSelector: '#main-page-section-5-carousel-1 .carousel-pagination-arrows .arrow-prev',
-      buttonNextSelector: '#main-page-section-5-carousel-1 .carousel-pagination-arrows .arrow-next'
-    });
-
-    $('#main-page-section-6-carousel-1').carouselType2({
-      itemListSelector: '#main-page-section-6-carousel-1 .carousel-item-list',
-      buttonPrevSelector: '#main-page-section-6-carousel-1 .carousel-pagination-arrows .arrow-prev',
-      buttonNextSelector: '#main-page-section-6-carousel-1 .carousel-pagination-arrows .arrow-next'
-    });
-
-    $('#main-page-section-8-carousel-1').carouselType4({
-      visibleAreaSelector: '#main-page-section-8-carousel-1 .carousel-item-list-outer-wrapper',
-      itemListMovableContainerSelector: '#main-page-section-8-carousel-1 .carousel-item-list',
-      btnPrevSelector: '#main-page-section-8-carousel-1 .carousel-pagination-arrows .arrow-prev',
-      btnNextSelector: '#main-page-section-8-carousel-1 .carousel-pagination-arrows .arrow-next'
-    });
-
-    $('#main-page-section-9-carousel-1').carouselType2({
-      itemListSelector: '#main-page-section-9-carousel-1 .carousel-item-list',
-      buttonPrevSelector: '#main-page-section-9-carousel-1 .carousel-pagination-arrows .arrow-prev',
-      buttonNextSelector: '#main-page-section-9-carousel-1 .carousel-pagination-arrows .arrow-next'
-    });
-
-    $('#main-page-section-10-carousel-1').carouselType3({
-      itemListSelector: '#main-page-section-10-carousel-1 .carousel-item-list',
-      buttonPrevSelector: '#main-page-section-10-carousel-1 .carousel-pagination-arrows .arrow-prev',
-      buttonNextSelector: '#main-page-section-10-carousel-1 .carousel-pagination-arrows .arrow-next'
-    });
-
-    // Parallax
-    $(window).on('scroll', function() {
-      var yPos = window.pageYOffset;
-      /*
-      $('#main-page-section-1').css('top', yPos * 0.3 + 'px');
-
-      if(yPos > 950) {
-        $('#main-page-section-2 .width-wrapper .bg-secondary-image-1').css('top', (yPos - 950) * 0.2 - 381 + 'px');
-      }
-
-      if(yPos > 3547) {
-        $('#main-page-section-5 .width-wrapper .bg-image-1').css('top', (yPos - 3547) * 0.2 - 220 + 'px');
-      }
-
-      if(yPos > 4766) {
-        $('#main-page-section-6 .width-wrapper .bg-image-1').css('top', (yPos - 4766) * 0.2 - 220 + 'px');
-      }
-      */
-      $('#main-page-section-2').css('top', '-' + yPos * 0.3 + 'px');
-    });
-  });
-</script>
