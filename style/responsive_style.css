@@ -20,19 +20,62 @@
       header .width-wrapper .subblock-1-wrapper .search {
         margin: 0px 0px 0px 85px; }
     header .width-wrapper #top-logo-block {
-      margin: 0px 0px 0px 0px; }
+      margin: 0px 0px 0px 20px; }
+      header .width-wrapper #top-logo-block .top-logo-image {
+        width: 42px;
+        height: 40px; }
+      header .width-wrapper #top-logo-block .top-logo-text {
+        width: 49px;
+        height: 13px;
+        margin: 0px 0px 0px 15px; }
   header #main-menu-dialog {
-    width: 100%; }
+    width: 100%;
+    height: auto; }
     header #main-menu-dialog .width-wrapper {
       max-width: 100%; }
       header #main-menu-dialog .width-wrapper .blocks-wrapper .block.block-1 {
         width: 100%; }
-        header #main-menu-dialog .width-wrapper .blocks-wrapper .block.block-1 .site-navigation-block .menu-item-list .menu-item .level-1 > .item-text {
-          font-size: 20px; }
-        header #main-menu-dialog .width-wrapper .blocks-wrapper .block.block-1 .site-navigation-block .menu-item-list .menu-item .menu-subitem-list .level-2 .subitem-text {
-          font-size: 17px; }
+        header #main-menu-dialog .width-wrapper .blocks-wrapper .block.block-1 .site-navigation-block {
+          justify-content: flex-start;
+          padding: 20px 30px; }
+          header #main-menu-dialog .width-wrapper .blocks-wrapper .block.block-1 .site-navigation-block .close-button {
+            top: -55px;
+            background-color: #151616; }
+          header #main-menu-dialog .width-wrapper .blocks-wrapper .block.block-1 .site-navigation-block .menu-item-list .menu-item {
+            margin: 17px 0px 0px 0px; }
+            header #main-menu-dialog .width-wrapper .blocks-wrapper .block.block-1 .site-navigation-block .menu-item-list .menu-item.activated {
+              margin: 17px 0px 0px 0px; }
+            header #main-menu-dialog .width-wrapper .blocks-wrapper .block.block-1 .site-navigation-block .menu-item-list .menu-item .level-1 > .item-text {
+              font-size: 20px; }
+            header #main-menu-dialog .width-wrapper .blocks-wrapper .block.block-1 .site-navigation-block .menu-item-list .menu-item .menu-subitem-list .level-2 .subitem-text {
+              font-size: 17px; }
+          header #main-menu-dialog .width-wrapper .blocks-wrapper .block.block-1 .site-navigation-block .request-call-block {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 37px 0px 27px 0px; }
+            header #main-menu-dialog .width-wrapper .blocks-wrapper .block.block-1 .site-navigation-block .request-call-block .top-request-call-button {
+              margin: 0px 0px 0px 0px; }
+            header #main-menu-dialog .width-wrapper .blocks-wrapper .block.block-1 .site-navigation-block .request-call-block .telephone-number {
+              text-align: right;
+              font-size: 15px;
+              font-weight: 400;
+              line-height: normal; }
+          header #main-menu-dialog .width-wrapper .blocks-wrapper .block.block-1 .site-navigation-block .language-and-social-block {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 30px 0px 0px 0px; }
+            header #main-menu-dialog .width-wrapper .blocks-wrapper .block.block-1 .site-navigation-block .language-and-social-block .social-list-block .social-item svg path {
+              fill: #B6A172; }
       header #main-menu-dialog .width-wrapper .blocks-wrapper .block.block-2 {
         display: none; }
+
+  #main-menu {
+    width: auto;
+    margin: 0px 20px 0px 0px; }
+    #main-menu #menu-toggle-button .menu-common-text {
+      display: none; }
 
   footer {
     padding: 20px 20px; }

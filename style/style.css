@@ -914,7 +914,7 @@ footer {
   #top-logo-block .top-logo-text {
     margin: 0px 0px 0px 22px; }
 
-#top-request-call-button {
+#top-request-call-button, .top-request-call-button {
   display: flex;
   align-items: center;
   justify-content: stretch;
@@ -922,7 +922,7 @@ footer {
   text-transform: uppercase;
   cursor: pointer;
   margin: 0px 0px 0px 60px; }
-  #top-request-call-button .rectangles-block {
+  #top-request-call-button .rectangles-block, .top-request-call-button .rectangles-block {
     position: absolute;
     top: 50%;
     left: 0;
@@ -932,7 +932,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center; }
-    #top-request-call-button .rectangles-block .block-inner-wrapper .inner-rectangle-1, #top-request-call-button .rectangles-block .block-inner-wrapper .inner-rectangle-2 {
+    #top-request-call-button .rectangles-block .block-inner-wrapper .inner-rectangle-1, #top-request-call-button .rectangles-block .block-inner-wrapper .inner-rectangle-2, .top-request-call-button .rectangles-block .block-inner-wrapper .inner-rectangle-1, .top-request-call-button .rectangles-block .block-inner-wrapper .inner-rectangle-2 {
       position: absolute;
       transform: translate(-50%, -50%);
       top: 50%;
@@ -940,11 +940,11 @@ footer {
       width: 26px;
       height: 26px;
       border: 1px solid #B6A172; }
-    #top-request-call-button .rectangles-block .block-inner-wrapper .inner-rectangle-1 {
+    #top-request-call-button .rectangles-block .block-inner-wrapper .inner-rectangle-1, .top-request-call-button .rectangles-block .block-inner-wrapper .inner-rectangle-1 {
       animation: request_button_animation_1 2s infinite; }
-    #top-request-call-button .rectangles-block .block-inner-wrapper .inner-rectangle-2 {
+    #top-request-call-button .rectangles-block .block-inner-wrapper .inner-rectangle-2, .top-request-call-button .rectangles-block .block-inner-wrapper .inner-rectangle-2 {
       animation: request_button_animation_2 2s infinite; }
-  #top-request-call-button .button-text {
+  #top-request-call-button .button-text, .top-request-call-button .button-text {
     color: #F4F4F4;
     font-size: 15px;
     font-weight: 400;
@@ -954,7 +954,7 @@ footer {
     white-space: nowrap;
     margin: 0px 0px 0px 15px;
     color: #F4F4F4; }
-  #top-request-call-button:hover .rectangles-block .block-inner-wrapper .inner-rectangle-1, #top-request-call-button:hover .rectangles-block .block-inner-wrapper .inner-rectangle-2 {
+  #top-request-call-button:hover .rectangles-block .block-inner-wrapper .inner-rectangle-1, #top-request-call-button:hover .rectangles-block .block-inner-wrapper .inner-rectangle-2, .top-request-call-button:hover .rectangles-block .block-inner-wrapper .inner-rectangle-1, .top-request-call-button:hover .rectangles-block .block-inner-wrapper .inner-rectangle-2 {
     animation: none;
     border-color: #F4F4F4; }
 

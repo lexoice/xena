@@ -38,12 +38,24 @@ $color_white: #F4F4F4;
       }
 
       #top-logo-block {
-        margin: 0px 0px 0px 0px;
+        margin: 0px 0px 0px 20px;
+
+        .top-logo-image {
+          width: 42px;
+          height: 40px;
+        }
+
+        .top-logo-text {
+          width: 49px;
+          height: 13px;
+          margin: 0px 0px 0px 15px;
+        }
       }
     }
 
     #main-menu-dialog {
       width: 100%;
+      height: auto;
 
       .width-wrapper {
         max-width: 100%;
@@ -54,8 +66,22 @@ $color_white: #F4F4F4;
               width: 100%;
 
               .site-navigation-block {
+                justify-content: flex-start;
+                padding: 20px 30px;
+
+                .close-button {
+                  top: -55px;
+                  background-color: $color_background;
+                }
+
                 .menu-item-list {
                   .menu-item {
+                    margin: 17px 0px 0px 0px;
+
+                    &.activated {
+                      margin: 17px 0px 0px 0px;
+                    }
+
                     .level-1 {
                       > .item-text {
                         font-size: 20px;
@@ -71,6 +97,41 @@ $color_white: #F4F4F4;
                     }
                   }
                 }
+
+                .request-call-block {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  margin: 37px 0px 27px 0px;
+
+                  .top-request-call-button {
+                    margin: 0px 0px 0px 0px;
+                  }
+
+                  .telephone-number {
+                    text-align: right;
+                    font-size: 15px;
+                    font-weight: 400;
+                    line-height: normal;
+                  }
+                }
+
+                .language-and-social-block {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  margin: 30px 0px 0px 0px;
+
+                  .social-list-block {
+                    .social-item {
+                      svg {
+                        path {
+                          fill: $color_gold;
+                        }
+                      }
+                    }
+                  }
+                }
               }
             }
 
@@ -79,6 +140,17 @@ $color_white: #F4F4F4;
             }
           }
         }
+      }
+    }
+  }
+
+  #main-menu {
+    width: auto;
+    margin: 0px 20px 0px 0px;
+
+    #menu-toggle-button {
+      .menu-common-text {
+        display: none;
       }
     }
   }
