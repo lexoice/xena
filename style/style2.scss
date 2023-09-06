@@ -524,13 +524,6 @@ $color_white: #F4F4F4;
   height: 717px;
   padding: 120px 140px 140px;
   box-sizing: border-box;
-
-  .form-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: stretch;
-  }
 }
 
 form {
@@ -852,9 +845,7 @@ body {
   flex-direction: column;
   align-items: stretch;
   justify-content: stretch;
-  background-color: $color_background;
   width: 100vw;
-  min-height: 100vh;
   overflow-x: hidden;
 
   .width-wrapper {
@@ -868,6 +859,7 @@ header {
   display: flex;
   align-items: stretch;
   justify-content: stretch;
+  background-color: $color_background;
 
   .width-wrapper {
     flex: 1;
@@ -1027,14 +1019,13 @@ footer {
 .close-button {
   display: block;
   width: 24px;
-  height: 40px;
-  background-color: $color_background;
+  height: 24px;
   cursor: pointer;
 
   svg {
     display: block;
     width: 24px;
-    height: 40px;
+    height: 24px;
   }
 
   &:hover {
@@ -1978,6 +1969,7 @@ footer {
   flex-direction: column;
   align-items: stretch;
   justify-content: flex-start;
+  background-color: $color_background;
   padding: 0px 0px 180px 0px;
   position: relative;
   width: 100%;
@@ -3846,6 +3838,10 @@ footer {
             &.block-2 {
               width: 1090px;
               z-index: 20;
+
+              #order-design-project-form-block {
+                margin: 60px 0px 0px 0px;
+              }
             }
           }
         }
@@ -4034,7 +4030,6 @@ footer {
       padding: 80px 0px 100px;
 
       .width-wrapper {
-        max-width: 1650px;
         .blocks-wrapper {
           display: flex;
           flex-direction: row;
@@ -4296,7 +4291,7 @@ footer {
           margin: 140px auto 0px;
 
           .section-heading {
-            color: $color_gold;
+            color: #B6A172;
             text-align: center;
             font-family: Aguila;
             font-size: 100px;
@@ -4304,25 +4299,16 @@ footer {
             line-height: 110%;
             letter-spacing: 5px;
             text-transform: uppercase;
-            z-index: 20;
-            background-color: $color_background;
           }
 
           .section-background {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: #555;
-            text-align: center;
-            font-family: Aguila;
-            font-size: 500px;
-            font-style: normal;
-            font-weight: 250;
-            line-height: 110%; /* 550px */
-            letter-spacing: 25px;
-            text-transform: uppercase;
-            z-index: 10;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            width: 100%;
+            height: 100%;
           }
         }
 
@@ -5068,16 +5054,6 @@ footer {
         max-width: 1920px;
         display: flex;
         justify-content: flex-end;
-
-        #order-design-project-form-block {
-          margin: 60px 0px 0px 0px;
-
-          .form-wrapper {
-            form {
-              flex-direction: column;
-            }
-          }
-        }
       }
     }
   }
@@ -5723,19 +5699,4 @@ footer {
       z-index: 30;
     }
   }
-}
-
-/* Fixes */
-.page-404-bg-1 {
-  display: block;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-}
-
-.page-404-bg-2 {
-  display: block;
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
 }

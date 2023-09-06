@@ -15,6 +15,12 @@
     <script type="text/javascript" src="./js/page_scripts/main_page.js"></script>
   </head>
   <body>
+    <a id="scroll-top-button" onclick="javascript:window.scrollTo(0, 0);">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+        <path d="M15 10L21.4952 17.5L8.50481 17.5L15 10Z" fill="#B6A172"/>
+      </svg>
+      <p class="button-text">Scroll<br />to top</p>
+    </a>
     <div id="request-call-modal" class="dialog-modal">
       <div class="modal-inner-wrapper">
         <div class="modal-dark-overlay" onclick="toggleModal('#request-call-modal', 'close');"></div>
@@ -71,10 +77,13 @@
                 <textarea class="form-group-textarea" name="order_design_form_comment" placeholder=""></textarea>
               </div>
               <div class="form-group checkbox agreement">
-                <input type="checkbox" name="order_design_form_agreement" value="1" id="order-design-form-agreement" />
-                <label for="order-design-form-agreement">I agree with the processing of&nbsp;<a class="privacy-policy-link gold-text" href="#">personal data<a/></label>
+                <div class="checkbox-input" id="order-design-form-agreement" onclick="toggleCheckbox($(this));">
+                  <span class="inner-rectangle"></span>
                 </div>
-                <a class="submit-button" onclick="sendOrderAProjectRequest();">Send</a>
+                <input type="checkbox" name="order_design_form_agreement" value="1" />
+                <label for="order-design-form-agreement">I agree with the processing of&nbsp;<a class="privacy-policy-link gold-text" href="#">personal data<a/></label>
+              </div>
+              <a class="submit-button" onclick="sendOrderAProjectRequest();">Send</a>
             </div>
           </form>
         </div>
@@ -735,7 +744,10 @@
 
       <div id="main-page-section-2" class="page-section on-show">
         <div class="width-wrapper">
-          <img class="bg-secondary-image-1" src="./image/main-page-section-2-bg-secondary-image-1.png" alt="" title="" />
+          <!-- img class="bg-secondary-image-1" src="./image/main-page-section-2-bg-secondary-image-1.png" alt="" title="" / -->
+          <img class="bg-secondary-image-1" src="./image/main_page_section_2_bg_3.png" alt="" title="" />
+
+
 
           <div id="main-page-section-2-carousel-1" class="carousel-type-2">
             <div class="carousel-item-list">
@@ -807,13 +819,6 @@
               </a>
             </div>
           </div>
-
-          <a class="scroll-top-button" onclick="">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
-              <path d="M15 10L21.4952 17.5L8.50481 17.5L15 10Z" fill="#B6A172"/>
-            </svg>
-            <p class="button-text">Scroll<br />to top</p>
-          </a>
         </div>
       </div>
 

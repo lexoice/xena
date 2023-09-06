@@ -249,6 +249,38 @@
     opacity: 0;
     transition: all 0.3s; }
 
+#scroll-top-button {
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 150%;
+  bottom: auto;
+  right: 54px;
+  transform: translate(0, -50%);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid #B6A172;
+  cursor: pointer;
+  user-select: none;
+  z-index: 70; }
+  #scroll-top-button.active {
+    opacity: 1;
+    pointer-events: all;
+    top: auto;
+    bottom: 54px; }
+  #scroll-top-button .button-text {
+    color: #B6A172;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 0.77px;
+    text-transform: uppercase; }
+
 .view-project-button {
   width: 120px;
   height: 120px;
@@ -334,6 +366,11 @@
   height: 717px;
   padding: 120px 140px 140px;
   box-sizing: border-box; }
+  .form-block .form-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: stretch; }
 
 form {
   display: flex;
@@ -387,9 +424,35 @@ form {
         font-weight: 400;
         line-height: 140%;
         text-transform: none;
-        margin: 0px 0px 0px 10px; }
+        margin: 0px 0px 0px 10px;
+        padding: 0px; }
         form .form-group.checkbox label .gold-text {
           color: #B6A172; }
+      form .form-group.checkbox input {
+        width: 0px;
+        height: 0px;
+        opacity: 0;
+        margin: 0px;
+        padding: 0px;
+        border: none;
+        outline: none;
+        pointer-events: auto; }
+      form .form-group.checkbox .checkbox-input {
+        border: 1px solid #B6A172;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        cursor: pointer; }
+        form .form-group.checkbox .checkbox-input .inner-rectangle {
+          display: block;
+          width: 10px;
+          height: 10px;
+          background-color: #B6A172;
+          opacity: 0; }
+        form .form-group.checkbox .checkbox-input.active .inner-rectangle {
+          opacity: 1; }
   form .form-row {
     display: flex;
     flex-direction: row;
@@ -549,7 +612,9 @@ body {
   flex-direction: column;
   align-items: stretch;
   justify-content: stretch;
+  background-color: #151616;
   width: 100vw;
+  min-height: 100vh;
   overflow-x: hidden; }
   body .width-wrapper {
     margin-left: auto;
@@ -559,17 +624,17 @@ header {
   position: relative;
   display: flex;
   align-items: stretch;
-  justify-content: stretch;
-  background-color: #151616; }
+  justify-content: stretch; }
   header .width-wrapper {
     flex: 1;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: stretch;
     margin: 20px auto;
     max-width: 1650px; }
     header .width-wrapper .subblock-1-wrapper {
+      flex: 1;
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -665,12 +730,13 @@ footer {
 .close-button {
   display: block;
   width: 24px;
-  height: 24px;
+  height: 40px;
+  background-color: #151616;
   cursor: pointer; }
   .close-button svg {
     display: block;
     width: 24px;
-    height: 24px; }
+    height: 40px; }
   .close-button:hover svg {
     transform: rotateZ(360deg); }
     .close-button:hover svg path {
@@ -903,10 +969,14 @@ footer {
   margin: 0px 0px 0px 10px; }
 
 #top-logo-block {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
   display: flex;
   align-items: center;
   justify-content: stretch;
-  margin: 0px 0px 0px 498px; }
+  margin: 0px 0px 0px 0px; }
   #top-logo-block .top-logo-image {
     display: block;
     width: 60px;
@@ -1298,7 +1368,6 @@ footer {
   flex-direction: column;
   align-items: stretch;
   justify-content: flex-start;
-  background-color: #151616;
   padding: 0px 0px 180px 0px;
   position: relative;
   width: 100%;
@@ -1502,36 +1571,14 @@ footer {
       position: relative;
       max-width: 1370px; }
       #content.main-page-content #main-page-section-2 .width-wrapper .bg-secondary-image-1 {
-        position: absolute;
-        top: -381px;
-        left: -200px;
+        top: -350px;
+        left: -289px;
         width: 952.799px;
         height: 859.449px;
-        transform: rotate(15deg);
+        transform: rotate(355deg);
         opacity: 0.8;
         z-index: 1;
         transition: none; }
-      #content.main-page-content #main-page-section-2 .width-wrapper .scroll-top-button {
-        position: absolute;
-        top: 50%;
-        right: -221px;
-        transform: translate(0, -50%);
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        border: 1px solid #B6A172;
-        z-index: 70; }
-        #content.main-page-content #main-page-section-2 .width-wrapper .scroll-top-button .button-text {
-          color: #B6A172;
-          font-size: 11px;
-          font-weight: 600;
-          line-height: 120%;
-          letter-spacing: 0.77px;
-          text-transform: uppercase; }
   #content.main-page-content #main-page-section-2-carousel-1 {
     position: relative;
     transition: none;
@@ -2576,8 +2623,6 @@ footer {
           #content.individual-projects-page-content #individual-projects-page-section-5 .width-wrapper .blocks-wrapper .block.block-2 {
             width: 1090px;
             z-index: 20; }
-            #content.individual-projects-page-content #individual-projects-page-section-5 .width-wrapper .blocks-wrapper .block.block-2 #order-design-project-form-block {
-              margin: 60px 0px 0px 0px; }
   #content.contacts-page-content #contacts-page-section-1 {
     padding: 50px 0px 100px;
     border-bottom: 1px solid #B6A172; }
@@ -2681,9 +2726,11 @@ footer {
           right: 140px;
           bottom: 0px;
           padding: 50px 60px 60px; }
-          #content.contacts-page-content #contacts-page-section-3 .width-wrapper .blocks-wrapper .block.block-2 #news-letter-subscribe-form-block .form-wrapper form .submit-button {
-            display: block;
-            text-align: center; }
+          #content.contacts-page-content #contacts-page-section-3 .width-wrapper .blocks-wrapper .block.block-2 #news-letter-subscribe-form-block .form-wrapper form {
+            flex-direction: column; }
+            #content.contacts-page-content #contacts-page-section-3 .width-wrapper .blocks-wrapper .block.block-2 #news-letter-subscribe-form-block .form-wrapper form .submit-button {
+              display: block;
+              text-align: center; }
   #content.about-us-page-content #about-us-page-section-1 {
     padding: 50px 0px 100px; }
     #content.about-us-page-content #about-us-page-section-1 .width-wrapper .section-info-wrapper {
@@ -2692,41 +2739,43 @@ footer {
   #content.about-us-page-content #about-us-page-section-2 {
     background-color: #B6A172;
     padding: 80px 0px 100px; }
-    #content.about-us-page-content #about-us-page-section-2 .width-wrapper .blocks-wrapper {
-      display: flex;
-      flex-direction: row;
-      align-items: stretch;
-      justify-content: stretch; }
-      #content.about-us-page-content #about-us-page-section-2 .width-wrapper .blocks-wrapper .block {
+    #content.about-us-page-content #about-us-page-section-2 .width-wrapper {
+      max-width: 1650px; }
+      #content.about-us-page-content #about-us-page-section-2 .width-wrapper .blocks-wrapper {
         display: flex;
-        align-items: center;
-        justify-content: flex-start; }
-        #content.about-us-page-content #about-us-page-section-2 .width-wrapper .blocks-wrapper .block.block-1 {
-          width: 560px; }
-          #content.about-us-page-content #about-us-page-section-2 .width-wrapper .blocks-wrapper .block.block-1 .section-heading {
-            color: #F4F4F4; }
-        #content.about-us-page-content #about-us-page-section-2 .width-wrapper .blocks-wrapper .block.block-2 {
-          flex: 1;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: stretch; }
+        #content.about-us-page-content #about-us-page-section-2 .width-wrapper .blocks-wrapper .block {
           display: flex;
-          flex-direction: row;
           align-items: center;
-          justify-content: space-between; }
-          #content.about-us-page-content #about-us-page-section-2 .width-wrapper .blocks-wrapper .block.block-2 .statistics-item .statistics-text-1 {
-            color: #F4F4F4;
-            text-align: center;
-            font-size: 100px;
-            font-weight: 600;
-            line-height: 110%;
-            text-transform: uppercase; }
-          #content.about-us-page-content #about-us-page-section-2 .width-wrapper .blocks-wrapper .block.block-2 .statistics-item .statistics-text-2 {
-            color: #F4F4F4;
-            text-align: center;
-            font-size: 20px;
-            font-weight: 600;
-            line-height: 120%;
-            letter-spacing: 1.4px;
-            text-transform: uppercase;
-            margin: 16px 0px 0px 0px; }
+          justify-content: flex-start; }
+          #content.about-us-page-content #about-us-page-section-2 .width-wrapper .blocks-wrapper .block.block-1 {
+            width: 560px; }
+            #content.about-us-page-content #about-us-page-section-2 .width-wrapper .blocks-wrapper .block.block-1 .section-heading {
+              color: #F4F4F4; }
+          #content.about-us-page-content #about-us-page-section-2 .width-wrapper .blocks-wrapper .block.block-2 {
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between; }
+            #content.about-us-page-content #about-us-page-section-2 .width-wrapper .blocks-wrapper .block.block-2 .statistics-item .statistics-text-1 {
+              color: #F4F4F4;
+              text-align: center;
+              font-size: 100px;
+              font-weight: 600;
+              line-height: 110%;
+              text-transform: uppercase; }
+            #content.about-us-page-content #about-us-page-section-2 .width-wrapper .blocks-wrapper .block.block-2 .statistics-item .statistics-text-2 {
+              color: #F4F4F4;
+              text-align: center;
+              font-size: 20px;
+              font-weight: 600;
+              line-height: 120%;
+              letter-spacing: 1.4px;
+              text-transform: uppercase;
+              margin: 16px 0px 0px 0px; }
   #content.about-us-page-content #about-us-page-section-3 {
     padding: 180px 0px 224px; }
     #content.about-us-page-content #about-us-page-section-3 .width-wrapper {
@@ -2867,15 +2916,25 @@ footer {
       font-weight: 250;
       line-height: 110%;
       letter-spacing: 5px;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      z-index: 20;
+      background-color: #151616; }
     #content.page-404-content #page-404-section-1 .width-wrapper .central-block .section-background {
       position: absolute;
-      top: 0px;
-      left: 0px;
-      right: 0px;
-      bottom: 0px;
-      width: 100%;
-      height: 100%; }
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #555;
+      text-align: center;
+      font-family: Aguila;
+      font-size: 500px;
+      font-style: normal;
+      font-weight: 250;
+      line-height: 110%;
+      /* 550px */
+      letter-spacing: 25px;
+      text-transform: uppercase;
+      z-index: 10; }
   #content.page-404-content #page-404-section-1 .width-wrapper .section-text-1 {
     width: 530px;
     color: #F4F4F4;
@@ -3382,6 +3441,10 @@ footer {
       max-width: 1920px;
       display: flex;
       justify-content: flex-end; }
+      #content.article-page-content #article-page-section-11 .width-wrapper #order-design-project-form-block {
+        margin: 60px 0px 0px 0px; }
+        #content.article-page-content #article-page-section-11 .width-wrapper #order-design-project-form-block .form-wrapper form {
+          flex-direction: column; }
   #content.suppliers-page-content .page-section {
     position: relative; }
   #content.suppliers-page-content #suppliers-page-section-1 {
@@ -3761,5 +3824,18 @@ footer {
       right: 100px;
       transform: translate(0, -50%);
       z-index: 30; }
+
+/* Fixes */
+.page-404-bg-1 {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px; }
+
+.page-404-bg-2 {
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  right: 0px; }
 
 /*# sourceMappingURL=style.css.map */
