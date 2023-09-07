@@ -13,6 +13,7 @@
     <script type="text/javascript" src="./js/carousels/carousel_type_3.js"></script>
     <script type="text/javascript" src="./js/carousels/carousel_type_4.js"></script>
     <script type="text/javascript" src="./js/page_scripts/main_page.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/scrollreveal"></script>
   </head>
   <body>
     <a id="scroll-top-button" onclick="javascript:window.scrollTo(0, 0);">
@@ -81,7 +82,7 @@
                   <span class="inner-rectangle"></span>
                 </div>
                 <input type="checkbox" name="order_design_form_agreement" value="1" />
-                <label for="order-design-form-agreement">I agree with the processing of&nbsp;<a class="privacy-policy-link gold-text" href="#">personal data<a/></label>
+                <label for="order-design-form-agreement">I agree with the processing of&nbsp;<a class="privacy-policy-link gold-text" href="#">personal data</a></label>
               </div>
               <a class="submit-button" onclick="sendOrderAProjectRequest();">Send</a>
             </div>
@@ -634,6 +635,9 @@
 
     <div id="content" class="main-page-content">
       <div id="main-page-section-1" class="page-section on-show">
+        <div id="cursor">
+          <div class="cursor--inner"></div>
+        </div>
         <div class="width-wrapper">
           <div id="main-top-carousel" class="carousel-type-1">
             <div class="carousel-item-list">
@@ -686,6 +690,8 @@
               </div>
             </div>
             <div class="carousel-pagination-arrows">
+
+
               <a class="carousel-arrow arrow-prev" onclick="">
                 <svg xmlns="http://www.w3.org/2000/svg" width="70" height="50" viewBox="0 0 70 50" fill="none">
                   <path class="path-1" d="M20 25L25 22L25 24.5L70 24.5L70 25.5L25 25.5L25 28L20 25Z" fill="#F4F4F4"/>
@@ -745,8 +751,9 @@
       <div id="main-page-section-2" class="page-section on-show">
         <div class="width-wrapper">
           <!-- img class="bg-secondary-image-1" src="./image/main-page-section-2-bg-secondary-image-1.png" alt="" title="" / -->
-          <img class="bg-secondary-image-1" src="./image/main_page_section_2_bg_3.png" alt="" title="" />
-
+          <div class="parallax-container-sand">
+            <img class="bg-secondary-image-1" src="./image/gold-main-sand.png" alt="" title="" />
+          </div>
 
 
           <div id="main-page-section-2-carousel-1" class="carousel-type-2">
@@ -778,7 +785,7 @@
                   </a>
                   <div class="block-image-wrapper item-image-wrapper">
                     <div class="dark-overlay"></div>
-                    <img src="./image/section_2_block_2.png" alt="" title="" />
+                    <img src="./image/main-page-section-10-carousel-image-3.jpg" alt="" title="" />
                   </div>
                 </div>
               </div>
@@ -794,7 +801,7 @@
                   </a>
                   <div class="block-image-wrapper item-image-wrapper">
                     <div class="dark-overlay"></div>
-                    <img src="./image/section_2_block_2.png" alt="" title="" />
+                    <img src="./image/main-page-section-4-image-2.jpg" alt="" title="" />
                   </div>
                 </div>
               </div>
@@ -1911,5 +1918,57 @@ AK studio (Exclusive boutique) was established in 2010. Our company works at all
         <p class="copyright-text">Christaki Kranou, 61c, Limassol, Germasogeya, Cyprus</p>
       </div>
     </div>
+
+    <script>
+
+
+      const cursor = document.querySelector('#cursor');
+      const block = document.querySelector('#main-page-section-1'); // Замените 'yourBlockId' на фактический ID вашего блока
+      let mouse = { x: 300, y: 300 };
+      let pos = { x: 0, y: 0 };
+      const speed = 0.8; // между 0 и 1
+
+      // Определите границы блока
+      const blockRect = block.getBoundingClientRect();
+      const blockLeft = blockRect.left;
+      const blockTop = blockRect.top;
+      const blockRight = blockRect.right;
+      const blockBottom = blockRect.bottom;
+
+      const updatePosition = () => {
+        pos.x += (mouse.x - pos.x) * speed;
+        pos.y += (mouse.y - pos.y) * speed;
+
+        // Проверьте, не вышел ли курсор за пределы блока
+        if (pos.x < blockLeft) {
+          pos.x = blockLeft;
+        } else if (pos.x > blockRight) {
+          pos.x = blockRight;
+        }
+
+        if (pos.y < blockTop) {
+          pos.y = blockTop;
+        } else if (pos.y > blockBottom) {
+          pos.y = blockBottom;
+        }
+
+        cursor.style.transform = 'translate3d(' + pos.x + 'px ,' + pos.y + 'px, 0)';
+      };
+
+      const updateCoordinates = e => {
+        mouse.x = e.clientX;
+        mouse.y = e.clientY;
+      }
+
+      window.addEventListener('mousemove', updateCoordinates);
+
+      function loop() {
+        updatePosition();
+        requestAnimationFrame(loop);
+      }
+
+      requestAnimationFrame(loop);
+
+    </script>
   </body>
 </html>

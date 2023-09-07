@@ -91,4 +91,15 @@ $(document).ready(function() {
       }
     }
   });
+
+
+  const sr = ScrollReveal();
+  sr.reveal('.page-section', {
+    duration: 1000,
+    origin: 'bottom',
+    distance: '20px',
+    delay: 100,
+    easing: 'ease'
+  });
+
 });
