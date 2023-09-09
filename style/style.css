@@ -624,6 +624,9 @@ header {
   position: relative;
   display: flex;
   align-items: stretch;
+  max-width: 1650px;
+  margin: 0 auto;
+  width: 100%;
   justify-content: stretch; }
   header .width-wrapper {
     flex: 1;
@@ -1406,7 +1409,7 @@ footer {
       #content #breadcrumbs .divider-ellipse circle {
         fill: #B6A172; }
   #content.main-page-content #main-page-section-1 {
-    min-height: 520px;
+    min-height: 850px;
     top: 0px;
     z-index: 10; }
     #content.main-page-content #main-page-section-1 .width-wrapper {
@@ -3738,7 +3741,7 @@ footer {
     position: relative;
     transform: all 0.3s ease-out; }
     .dialog-modal .modal-inner-wrapper .modal-form-outer-wrapper {
-      width: 350px;
+      max-width: 50%;
       display: flex;
       align-items: stretch;
       justify-content: stretch;
@@ -3928,7 +3931,7 @@ footer {
   height: auto;
   bottom: auto;
   top: 50%;
-  right: 0;
+  right: 47px;
   transform: translateY(-50%);
   left: auto;
   color: #fff;
@@ -3977,7 +3980,7 @@ footer {
 .slideshow-text {
   overflow: hidden;
   position: absolute;
-  top: 41%;
+  top: 52%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 100;
@@ -3997,6 +4000,32 @@ footer {
     font-size: 40px;
   }
 }
+
+.slideshow .slick-dots li button {
+  font-size: 0;
+  background: transparent;
+  border: navajowhite;
+}
+
+#main-page-section-1 .link-type-2 {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 1.05px;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #FFF;
+}
+.slick-track .slick-slide {
+ padding: 3px;
+}
+.item-title {
+  font-size: 100px;
+}
+
+
 
 /*.page-section {*/
 /*  opacity: 0;*/

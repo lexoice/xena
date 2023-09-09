@@ -8,7 +8,15 @@
     <script type="text/javascript" src="./js/jquery/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="./js/scripts.js"></script>
     <script type="text/javascript" src="./js/carousels/carousel_type_2.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"></link>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"></link>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.12/jquery.mousewheel.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.6.1/dist/simpleParallax.min.js"></script>
+
   </head>
   <body>
     <a id="scroll-top-button" onclick="javascript:window.scrollTo(0, 0);">
@@ -1175,10 +1183,16 @@ The design of loft style living room suggests the presence of dark furniture. Ho
       buttonNextSelector: '#article-page-section-10-carousel-1 .carousel-pagination-arrows .arrow-next'
     });
 
-    // Parallax
-    $(window).on('scroll', function() {
-      var yPos = window.pageYOffset;
-      $('#article-page-section-1').css('top', yPos * 0.3 + 'px');
+
+      var image = document.querySelector('#article-page-section-1');
+      new simpleParallax(image, {
+      scale: 1.5
     });
+
+    // Parallax
+    // $(window).on('scroll', function() {
+    //   var yPos = window.pageYOffset;
+    //   $('#article-page-section-1').css('top', yPos * 0.3 + 'px');
+    // });
   });
 </script>
